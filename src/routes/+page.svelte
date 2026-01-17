@@ -961,8 +961,8 @@ Don't stop until 9.9+ achieved. This may take many iterations.`;
       <!-- Layer 3: Privacy Notice -->
       <div class="mt-6 pt-4 border-t border-chalkboard/10 text-center">
         <p class="text-chalkboard/40 text-xs max-w-2xl mx-auto">
-          Your ideas stay yours. IdeaRalph runs locally in Claude Code — no databases, no tracking, no data collection.
-          The MCP doesn't send your projects or ideas anywhere. GDPR compliant.
+          Your ideas stay yours. IdeaRalph runs locally in Claude Code. No databases, no tracking, no data collection.
+          The MCP doesn't send your projects or ideas anywhere.
         </p>
       </div>
     </div>
