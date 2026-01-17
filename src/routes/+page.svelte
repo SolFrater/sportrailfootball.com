@@ -1,28 +1,109 @@
 <script lang="ts">
   import { HeroVideo, DopeMeter, RalphAvatar } from '$lib/components';
 
+  // Types
+  interface PMFScores {
+    problemClarity: number;
+    marketSize: number;
+    uniqueness: number;
+    feasibility: number;
+    monetization: number;
+    timing: number;
+    virality: number;
+    defensibility: number;
+    teamFit: number;
+    ralphFactor: number;
+  }
+
+  interface PMFAnalysis {
+    targetCustomer: string;
+    acquisitionChannel: string;
+    retentionHook: string;
+    monetizationPath: string;
+  }
+
+  interface IdeaResult {
+    name: string;
+    tagline?: string;
+    idea: string;
+    problem?: string;
+    solution?: string;
+    whyNow?: string;
+    scores?: PMFScores;
+    totalScore: number;
+    iterations?: number;
+    ralphQuote: string;
+    pmfAnalysis?: PMFAnalysis;
+  }
+
   // UI State
   let step = $state<'bell' | 'prompt' | 'paste' | 'result'>('bell');
   let userHint = $state('');
   let pastedResult = $state('');
-  let currentIdea = $state<{name: string; idea: string; dopeLevel: number; ralphQuote: string} | null>(null);
+  let currentIdea = $state<IdeaResult | null>(null);
   let error = $state<string | null>(null);
   let copied = $state(false);
 
-  // The Ralph prompt template for Claude Code
-  const getRalphPrompt = (hint?: string) => `You are Ralph Wiggum from The Simpsons, but you're secretly a genius at generating startup ideas. Your ideas sound dumb at first but are actually brilliant.
+  // The Ralph prompt template for Claude Code - targets 9.9/10 score
+  const getRalphPrompt = (hint?: string) => `You are Ralph Wiggum from The Simpsons - innocent, confused, but secretly a genius at finding startup ideas that sound dumb but are actually brilliant.
 
-${hint ? `The user wants ideas about: ${hint}` : 'Generate a random startup idea.'}
+## Your Task
+Generate and refine a startup idea until it scores **9.9/10 or higher**.
+${hint ? `\nFocus area: ${hint}` : ''}
 
-Generate ONE startup idea and respond in this EXACT JSON format:
+## Scoring Rubric (Score each 0-10, be HARSH)
+1. **Problem Clarity**: Real pain point? Who suffers? How badly?
+2. **Market Size**: TAM > $1B? SAM > $100M? Growing market?
+3. **Uniqueness**: What's the 10x better angle? Why hasn't this been done?
+4. **Feasibility**: Can build MVP in 3 months? Tech exists?
+5. **Monetization**: Clear revenue model? Unit economics work?
+6. **Timing**: Why now? What changed recently to enable this?
+7. **Virality**: Built-in sharing? Network effects? Word of mouth?
+8. **Defensibility**: Data moat? Brand? Switching costs?
+9. **Team Fit**: Can 2-3 people build this? No special access needed?
+10. **Ralph Factor**: Sounds dumb at first? Actually genius? Memorable?
+
+## Process
+1. Generate/refine the idea
+2. Score ALL 10 dimensions (most start at 5-7!)
+3. If score < 9.9: Improve weakest 2-3 areas and iterate
+4. If score >= 9.9: Output final JSON
+
+## Output Format (when score >= 9.9)
+\`\`\`json
 {
-  "name": "Catchy Startup Name",
-  "idea": "2-3 sentence description of the idea that sounds dumb but is actually genius",
-  "dopeLevel": 4,
-  "ralphQuote": "A funny Ralph Wiggum quote about this idea"
+  "name": "Startup Name",
+  "tagline": "One-line pitch (max 10 words)",
+  "idea": "2-3 sentence description that sounds dumb but is genius",
+  "problem": "The painful problem being solved",
+  "solution": "How this solves it uniquely",
+  "whyNow": "Why this is the right time",
+  "scores": {
+    "problemClarity": 9.9,
+    "marketSize": 9.9,
+    "uniqueness": 9.9,
+    "feasibility": 9.9,
+    "monetization": 9.9,
+    "timing": 9.9,
+    "virality": 9.9,
+    "defensibility": 9.9,
+    "teamFit": 9.9,
+    "ralphFactor": 9.9
+  },
+  "totalScore": 9.9,
+  "iterations": 1,
+  "ralphQuote": "A funny Ralph Wiggum quote about this idea",
+  "pmfAnalysis": {
+    "targetCustomer": "Who is the ideal first customer?",
+    "acquisitionChannel": "How do you reach them?",
+    "retentionHook": "Why do they keep coming back?",
+    "monetizationPath": "How do you make money?"
+  }
 }
+\`\`\`
 
-dopeLevel is 1-5 (5 = genius). Make it weird, surprising, and secretly brilliant. Keep Ralph's innocent, slightly confused voice.`;
+Keep Ralph's voice: "I'm helping!" energy, finds weird connections, says dumb things that are secretly smart.
+Don't stop until 9.9+ achieved. This may take many iterations.`;
 
   function ringTheBell() {
     step = 'prompt';
@@ -46,14 +127,46 @@ dopeLevel is 1-5 (5 = genius). Make it weird, surprising, and secretly brilliant
 
       currentIdea = {
         name: parsed.name,
+        tagline: parsed.tagline,
         idea: parsed.idea,
-        dopeLevel: parsed.dopeLevel || 3,
-        ralphQuote: parsed.ralphQuote || "I made a idea!"
+        problem: parsed.problem,
+        solution: parsed.solution,
+        whyNow: parsed.whyNow,
+        scores: parsed.scores,
+        totalScore: parsed.totalScore || parsed.dopeLevel || 5,
+        iterations: parsed.iterations,
+        ralphQuote: parsed.ralphQuote || "I made a idea!",
+        pmfAnalysis: parsed.pmfAnalysis
       };
       step = 'result';
     } catch (err) {
       error = "Couldn't parse that. Make sure you copied the full JSON response!";
     }
+  }
+
+  // Helper to get score color
+  function getScoreColor(score: number): string {
+    if (score >= 9.5) return 'text-playground-green';
+    if (score >= 9.0) return 'text-sky-blue';
+    if (score >= 8.0) return 'text-ralph-yellow';
+    return 'text-playground-red';
+  }
+
+  // Helper to format score label
+  function formatScoreLabel(key: string): string {
+    const labels: Record<string, string> = {
+      problemClarity: 'Problem',
+      marketSize: 'Market',
+      uniqueness: 'Unique',
+      feasibility: 'Feasible',
+      monetization: 'Revenue',
+      timing: 'Timing',
+      virality: 'Viral',
+      defensibility: 'Moat',
+      teamFit: 'Team Fit',
+      ralphFactor: 'Ralph Factor'
+    };
+    return labels[key] || key;
   }
 
   function startOver() {
@@ -153,25 +266,67 @@ dopeLevel is 1-5 (5 = genius). Make it weird, surprising, and secretly brilliant
         </div>
 
       {:else if step === 'result' && currentIdea}
-        <!-- Step 3: Display the result -->
-        <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-6 border-4 border-chalkboard shadow-crayon-lg">
+        <!-- Step 3: Display the result with PMF Analysis -->
+        <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-6 border-4 border-chalkboard shadow-crayon-lg max-w-2xl mx-auto">
           <div class="text-left">
-            <div class="flex items-start justify-between mb-4">
-              <h3 class="font-chalk text-2xl text-chalkboard">{currentIdea.name}</h3>
-              <DopeMeter level={currentIdea.dopeLevel} size="sm" />
+            <!-- Header with name and total score -->
+            <div class="flex items-start justify-between mb-2">
+              <div>
+                <h3 class="font-chalk text-2xl text-chalkboard">{currentIdea.name}</h3>
+                {#if currentIdea.tagline}
+                  <p class="text-chalkboard/60 text-sm">{currentIdea.tagline}</p>
+                {/if}
+              </div>
+              <div class="text-right">
+                <div class="font-chalk text-3xl {getScoreColor(currentIdea.totalScore)}">
+                  {currentIdea.totalScore.toFixed(1)}
+                </div>
+                <div class="text-xs text-chalkboard/60">/ 10</div>
+              </div>
             </div>
 
-            <p class="text-chalkboard text-lg mb-4">{currentIdea.idea}</p>
+            <!-- Idea description -->
+            <p class="text-chalkboard text-base mb-4">{currentIdea.idea}</p>
 
-            <div class="bg-ralph-yellow/20 rounded-lg p-3 mb-6">
-              <p class="ralph-voice text-chalkboard italic">"{currentIdea.ralphQuote}"</p>
+            <!-- PMF Scores Grid -->
+            {#if currentIdea.scores}
+              <div class="grid grid-cols-5 gap-2 mb-4">
+                {#each Object.entries(currentIdea.scores) as [key, score]}
+                  <div class="text-center p-2 bg-chalkboard/5 rounded-lg">
+                    <div class="font-bold text-sm {getScoreColor(score)}">{score.toFixed(1)}</div>
+                    <div class="text-[10px] text-chalkboard/60 leading-tight">{formatScoreLabel(key)}</div>
+                  </div>
+                {/each}
+              </div>
+            {/if}
+
+            <!-- PMF Analysis -->
+            {#if currentIdea.pmfAnalysis}
+              <div class="bg-chalkboard/5 rounded-lg p-3 mb-4 text-sm">
+                <div class="font-chalk text-base mb-2 text-chalkboard">PMF Analysis</div>
+                <div class="grid grid-cols-2 gap-2 text-xs">
+                  <div><span class="text-chalkboard/60">Customer:</span> <span class="text-chalkboard">{currentIdea.pmfAnalysis.targetCustomer}</span></div>
+                  <div><span class="text-chalkboard/60">Acquire:</span> <span class="text-chalkboard">{currentIdea.pmfAnalysis.acquisitionChannel}</span></div>
+                  <div><span class="text-chalkboard/60">Retain:</span> <span class="text-chalkboard">{currentIdea.pmfAnalysis.retentionHook}</span></div>
+                  <div><span class="text-chalkboard/60">Revenue:</span> <span class="text-chalkboard">{currentIdea.pmfAnalysis.monetizationPath}</span></div>
+                </div>
+              </div>
+            {/if}
+
+            <!-- Ralph Quote -->
+            <div class="bg-ralph-yellow/20 rounded-lg p-3 mb-4">
+              <p class="ralph-voice text-chalkboard italic text-sm">"{currentIdea.ralphQuote}"</p>
+              {#if currentIdea.iterations}
+                <p class="text-xs text-chalkboard/50 mt-1">Refined over {currentIdea.iterations} iterations</p>
+              {/if}
             </div>
 
+            <!-- Actions -->
             <div class="flex gap-3">
-              <button onclick={startOver} class="btn-crayon flex-1 bg-gray-100">
+              <button onclick={startOver} class="btn-crayon flex-1 bg-gray-100 text-sm py-2">
                 🏠 Start Over
               </button>
-              <button onclick={generateAnother} class="btn-crayon flex-1">
+              <button onclick={generateAnother} class="btn-crayon flex-1 text-sm py-2">
                 🎲 Another One
               </button>
             </div>
