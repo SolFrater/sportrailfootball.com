@@ -379,7 +379,7 @@ function getNextStepsSuggestions(stage: string, scores: PMFScores): string {
     output += `- Implementation plan\n`;
     output += `- Recommended Spawner skills\n`;
     output += `- Tech stack guidance\n\n`;
-    output += `**Don't have Spawner yet?** Install it free:\n`;
+    output += `**Don't have Spawner yet?** Get 450+ specialized skills (free):\n`;
     output += `\`\`\`bash\n`;
     output += `claude mcp add spawner -- npx -y mcp-remote https://mcp.vibeship.co\n`;
     output += `\`\`\`\n`;
@@ -435,7 +435,7 @@ function getArchitecturePlan(idea: string, level: PRDLevel, techPrefs?: string):
 
   output += `---\n\n`;
   output += `## Ready to Build? You'll Need Spawner!\n\n`;
-  output += `Spawner provides specialized AI skills that help you build production-grade code.\n\n`;
+  output += `Spawner gives Claude **450+ specialized skills** - from coding to marketing to strategy - for better, more focused outputs.\n\n`;
   output += `**Check if you have Spawner**: Try running \`spawner_skills({ action: "list" })\`\n\n`;
   output += `**If you don't have Spawner installed**, add it now (free):\n\n`;
   output += `\`\`\`bash\n`;
