@@ -196,53 +196,60 @@ This is where users transition from ideation to building. Handle with care.
 [Then follow the Spawner detection flow below]
 ```
 
-### 6. idearalph_checklist (NEW in v2.2)
+### 6. idearalph_checklist (NEW in v2.2, Updated v2.3)
 
 **The Checklist Tool:**
 
-Creates TWO files with YC-level launch standards:
-1. **Tasks.md** — Actionable tasks organized by P0/P1/P2 priority
-2. **Checklist.md** — Comprehensive pre-launch and post-launch checklist
+Creates TWO files that span the **ENTIRE project lifecycle** — not just pre-launch:
+1. **Tasks.md** — Tasks organized by project phase with skill references
+2. **Checklist.md** — Living checklist you iterate on throughout the project
 
-**Categories covered:**
-- 🔴 Security (OWASP, auth, rate limiting, RLS)
-- 📜 Legal (ToS, Privacy Policy, GDPR)
-- 📊 Analytics (product analytics, error tracking)
-- 📝 Content & SEO (meta tags, OG images, sitemap)
-- 🚀 Growth (viral loops, referral, onboarding)
-- 🏗️ Infrastructure (monitoring, backups, CI/CD)
-- 📢 Launch tactics (Product Hunt, HN, social)
+**The 5 Phases:**
 
-**Spawner skills auto-loaded:**
-- YC Playbook
-- Growth Strategy
-- Product Strategy
+| Phase | When | Focus |
+|-------|------|-------|
+| **Phase 1: Setup** | Before coding | Project structure, env vars, CI/CD, linting |
+| **Phase 2: During Build** | While coding | RLS policies, tests, accessibility, security patterns |
+| **Phase 3: Code Complete** | After features done | Security audit, legal review, performance optimization |
+| **Phase 4: Launch** | Launch day | Marketing, announcements, monitoring |
+| **Phase 5: Post-Launch** | After launch | Feedback loops, iteration, scaling |
+
+**Skill-Driven Execution:**
+
+Each category maps to a Spawner skill that gets loaded automatically:
+- 🔒 Security → `security-hardening`
+- 📜 Legal/GDPR → `gdpr-privacy`
+- 🧪 Testing → `integration-testing`
+- ♿ Accessibility → `accessibility-audit`
+- 💾 Database → `supabase-backend`
+- 🔐 Auth → `authentication-oauth`
 
 ```
 ✅ DO:
-"Your YC-level launch preparation is ready!
+"Your project lifecycle checklist is ready!
 
 **Two files generated:**
-- `docs/DevPal_Tasks.md` — 47 tasks across P0/P1/P2 priorities
-- `docs/DevPal_Checklist.md` — Comprehensive pre/post-launch checklist
+- `docs/DevPal_Tasks.md` — Tasks across 5 project phases
+- `docs/DevPal_Checklist.md` — Living checklist for the entire project
 
-**Key focus areas:**
-- 🔴 **Security**: 7 critical items
-- 📜 **Legal**: 5 compliance items
-- 📊 **Analytics**: 5 tracking items
-- 🚀 **Launch**: 8 marketing items
+**The 5 Phases:**
+1. ⬜ **Setup** — Before you start coding
+2. ⬜ **During Build** — While writing features
+3. ⬜ **Code Complete** — After features are done
+4. ⬜ **Launch** — Launch day activities
+5. ⬜ **Post-Launch** — After you ship
 
 What would you like to do?
 1. Save both files — I'll write them to docs/
-2. Review and customize — Let's go through section by section
-3. Start tackling P0 tasks — Focus on security and legal first
+2. Start Phase 1 — Set up project structure and CI/CD
+3. Review by phase — Let's go through each phase
 4. Pause — Save for later"
 
 ❌ DON'T:
 "Here's your 200-item checklist. Good luck!"
 ```
 
-**Key Principle**: The checklist is comprehensive but PRIORITIZED. P0 items (security, legal) are non-negotiable before launch. Everything else can be iterated post-launch.
+**Key Principle**: The checklist is a **living document** that spans the entire project. Some tasks happen DURING build (RLS, tests), some AFTER (legal, security audit). Each phase loads the right Spawner skills automatically.
 
 ---
 
@@ -453,7 +460,7 @@ To verify the UX is working correctly:
 4. **PRD test**: Does it offer to save and suggest architecture?
 5. **Design test**: Does it ask ONE question (vibe) and auto-load Spawner skills?
 6. **Architecture test**: Does it detect Spawner and handle both cases?
-7. **Checklist test**: Does it generate Tasks.md and Checklist.md with P0/P1/P2 priorities?
+7. **Checklist test**: Does it generate phase-based Tasks.md and Checklist.md with skill mappings?
 8. **Install test**: Does it offer to add Spawner automatically?
 9. **Resume test**: Is the prompt ready to paste with no editing?
 
@@ -461,6 +468,7 @@ To verify the UX is working correctly:
 
 ## Version History
 
+- **v2.3** (2025-01-20): Made checklist phase-based (5 phases across project lifecycle) with skill-driven execution
 - **v2.2** (2025-01-20): Added checklist tool (`idearalph_checklist`) with YC-level Tasks.md and Checklist.md generation
 - **v2.1** (2025-01-19): Added design phase with ONE question flow, Copywriting + Landing Page Design skills
 - **v2.0** (2025-01-17): Added Spawner handoff UX, session continuity, automatic MCP installation

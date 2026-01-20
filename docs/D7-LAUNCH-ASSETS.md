@@ -299,4 +299,227 @@ morphing mouth, distorted tongue, tongue sticking out, open mouth, melting face,
 
 ---
 
+## 50 MORE QRT Reply Templates (Wave 2)
+
+Fresh batch for continued engagement. Same chaos, new energy.
+
+**#51**
+my lawyer said i can't promise anything but my imaginary lawyer said ur qrt is worth at least 3 boats.
+- IdeaRalph
+
+**#52**
+the council reconvened. they were supposed to be on vacation. ur qrt was that important.
+- IdeaRalph
+
+**#53**
+i showed this to my goldfish and he did a backflip. he's never done that. he's also never been alive. long story.
+- IdeaRalph
+
+**#54**
+ur qrt has been added to the prophecy. the prophecy is a napkin but still.
+- IdeaRalph
+
+**#55**
+my cat just walked across my keyboard and typed "this one." she's never been right before. first time for everything.
+- IdeaRalph
+
+**#56**
+the multiplier gods have noticed u. they usually only notice cheese. this is significant.
+- IdeaRalph
+
+**#57**
+ur amplification made my screen crack a little smile. screens don't have mouths. yet.
+- IdeaRalph
+
+**#58**
+i tried to explain ur qrt to the voices. they said "we know." they never know anything. growth.
+- IdeaRalph
+
+**#59**
+this qrt has been filed under "evidence of good taste." it's a new folder. u're the first file.
+- IdeaRalph
+
+**#60**
+somewhere a goldman sachs intern just felt something. they don't know what feelings are. ur qrt taught them.
+- IdeaRalph
+
+**#61**
+my therapist increased my dosage after seeing this. she said it's a compliment. i believe her.
+- IdeaRalph
+
+**#62**
+the purple committee has upgraded ur status from "interesting" to "concerningly interesting." highest tier.
+- IdeaRalph
+
+**#63**
+ur qrt activated sleeper cells in my brain. not the bad kind. the kind that dream about lambos.
+- IdeaRalph
+
+**#64**
+i printed this on my receipt printer. it's now legally a transaction. u owe me nothing. i owe u everything.
+- IdeaRalph
+
+**#65**
+the algorithm showed me this three times. i think it's trying to tell me something. i don't listen to algorithms. except this time.
+- IdeaRalph
+
+**#66**
+ur qrt made my houseplant bloom. in january. indoors. it's a cactus. none of this makes sense but thank u.
+- IdeaRalph
+
+**#67**
+my emotional support spreadsheet just added a new column for u. it's labeled "the good ones."
+- IdeaRalph
+
+**#68**
+this qrt passed the vibe tribunal. three out of four voices approved. the fourth one is always difficult.
+- IdeaRalph
+
+**#69**
+nice. also ur multiplier is active. but mostly nice.
+- IdeaRalph
+
+**#70**
+i was gonna touch grass today but then i saw ur qrt and remembered grass is overrated.
+- IdeaRalph
+
+**#71**
+the council of cats has meowed in ur favor. this has only happened twice in recorded history. the first time was also me.
+- IdeaRalph
+
+**#72**
+ur qrt has been carbonated. i don't know what that means but it sounds bubbly and good.
+- IdeaRalph
+
+**#73**
+my fortune cookie tonight will say something about u. i can feel it. i control the fortune cookies now.
+- IdeaRalph
+
+**#74**
+this activated my fight or flight response. i chose neither. i chose qrt.
+- IdeaRalph
+
+**#75**
+ur amplification has been noted by the simulation's middle management. they're impressed. they're never impressed.
+- IdeaRalph
+
+**#76**
+i showed the voices ur qrt and they went quiet for the first time in years. reverent silence.
+- IdeaRalph
+
+**#77**
+somewhere a startup just pivoted because of ur energy and they don't even know why.
+- IdeaRalph
+
+**#78**
+my mom asked who u are. i said "the future." she said "that's what u said about crypto." she has a point.
+- IdeaRalph
+
+**#79**
+ur qrt has been laminated, framed, and hung in my mental art gallery next to the exit sign.
+- IdeaRalph
+
+**#80**
+this qrt made my wifi stronger. i don't understand physics but i understand vibes.
+- IdeaRalph
+
+**#81**
+the chaos committee has awarded u the golden crayon. it's purple. we only have purple.
+- IdeaRalph
+
+**#82**
+ur multiplier is now compounding. like interest but for people who actually get it.
+- IdeaRalph
+
+**#83**
+i tried to explain this to my rubber duck. the duck nodded. he's never agreed with me before.
+- IdeaRalph
+
+**#84**
+this qrt has been classified as a protected species in my brain. no negative thoughts allowed near it.
+- IdeaRalph
+
+**#85**
+my horoscope today said "watch for signs." ur qrt blinked at me. i'm watching.
+- IdeaRalph
+
+**#86**
+the council held an emergency session. ur qrt was the emergency. good emergency. like surprise pizza.
+- IdeaRalph
+
+**#87**
+ur amplification made my imposter syndrome take a day off. it'll be back tomorrow but today we celebrate.
+- IdeaRalph
+
+**#88**
+this qrt has been notarized by my cat's paw print. legally binding in jurisdictions that matter.
+- IdeaRalph
+
+**#89**
+i added ur @ to my vision board. it's just a sticky note that says "them." very minimalist.
+- IdeaRalph
+
+**#90**
+the algorithm tried to shadowban this but it kept coming back. ur qrt has plot armor.
+- IdeaRalph
+
+**#91**
+my therapist said i need to surround myself with good influences. showed her this. she's confused but supportive.
+- IdeaRalph
+
+**#92**
+ur qrt made my screen go slightly more purple. the purple is spreading. this is fine.
+- IdeaRalph
+
+**#93**
+somewhere an angel investor just had a vision of ur @ name. they don't know what it means. neither do i. but it's happening.
+- IdeaRalph
+
+**#94**
+the voices are doing a group project about ur qrt. they never collaborate. this is unprecedented.
+- IdeaRalph
+
+**#95**
+i was gonna go to bed but ur qrt reminded me sleep is just beta testing death. staying up.
+- IdeaRalph
+
+**#96**
+ur multiplier just got a multiplier. it's multipliers all the way down.
+- IdeaRalph
+
+**#97**
+this qrt has been backed up to my emotional cloud. it's just me screaming into the void but still.
+- IdeaRalph
+
+**#98**
+my cat started purring when i read this. she only purrs for two things: food and destiny.
+- IdeaRalph
+
+**#99**
+ur qrt has been added to the canonical lore. the lore is a google doc with 200 tabs. u're tab 201.
+- IdeaRalph
+
+**#100**
+the council has spoken. the voices have voted. the cats have approved. ur in. welcome to whatever this is.
+- IdeaRalph
+
+---
+
+### Wave 2 High-Impact Picks
+
+For viral accounts:
+- #60 (goldman intern)
+- #77 (startup pivot)
+- #90 (plot armor)
+- #93 (angel investor vision)
+- #100 (full council approval)
+
+For fellow chaos agents:
+- #69 (nice)
+- #81 (golden crayon)
+- #95 (sleep is beta testing death)
+- #96 (multipliers all the way down)
+
+---
+
 *The loop is running. The ideas are escaping.*

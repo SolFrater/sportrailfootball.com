@@ -28,7 +28,7 @@ import {
 const server = new Server(
   {
     name: "idearalph-mcp",
-    version: "2.2.0", // Added design phase + launch checklist + SvelteKit default
+    version: "2.3.0", // Phase-based checklist + skill-driven execution
   },
   {
     capabilities: {
@@ -115,7 +115,7 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
 async function main() {
   const transport = new StdioServerTransport();
   await server.connect(transport);
-  console.error("IdeaRalph MCP Server v2.2 running on stdio (no API key required!)");
+  console.error("IdeaRalph MCP Server v2.3 running on stdio (no API key required!)");
 }
 
 main().catch((error) => {
