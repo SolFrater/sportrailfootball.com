@@ -911,19 +911,18 @@ Don't stop until 9.9+ achieved. This may take many iterations.`;
 
         <div class="bg-paper rounded-xl p-5 border-2 border-chalkboard/20 shadow-crayon">
           <div class="w-10 h-10 text-chalkboard mb-2">
-            <!-- Triangle recycle with arrows on edges -->
+            <!-- Boost/level up icon - ascending bars with arrow -->
             <svg viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round">
-              <!-- Triangle -->
-              <path d="M128,48 L200,176 L56,176 Z"/>
-              <!-- Arrow on right edge (top to bottom-right) -->
-              <polyline points="148,136 164,112 180,136"/>
-              <!-- Arrow on bottom edge (right to left) -->
-              <polyline points="104,192 128,176 104,160"/>
-              <!-- Arrow on left edge (bottom-left to top) -->
-              <polyline points="76,136 92,112 108,136"/>
+              <!-- Ascending bars -->
+              <line x1="56" y1="208" x2="56" y2="160"/>
+              <line x1="104" y1="208" x2="104" y2="120"/>
+              <line x1="152" y1="208" x2="152" y2="80"/>
+              <!-- Rocket arrow shooting up -->
+              <line x1="200" y1="208" x2="200" y2="48"/>
+              <polyline points="176,72 200,48 224,72"/>
             </svg>
           </div>
-          <h3 class="font-chalk text-lg text-chalkboard mb-1">Refine</h3>
+          <h3 class="font-chalk text-lg text-chalkboard mb-1">Iterate</h3>
           <p class="text-sm text-chalkboard/70">"Make this idea score 9.5+"</p>
           <p class="text-xs text-chalkboard/50 mt-2">Ralph Loop until it's dope</p>
         </div>
