@@ -38,7 +38,7 @@
   }
 
   // UI State
-  let step = $state<'bell' | 'setup' | 'install' | 'run' | 'paste' | 'result' | 'prd'>('bell');
+  let step = $state<'bell' | 'install' | 'run' | 'paste' | 'result' | 'prd'>('bell');
   let hasInstalledPlugin = $state(false);
 
   // Check if user has done setup before (persisted)
@@ -326,7 +326,7 @@ Don't stop until 9.9+ achieved. This may take many iterations.`;
 
   function ringTheBell() {
     // If they've already installed the plugin, skip to the run step
-    step = hasInstalledPlugin ? 'run' : 'setup';
+    step = hasInstalledPlugin ? 'run' : 'install';
   }
 
   function copyPrompt() {
@@ -455,44 +455,6 @@ Don't stop until 9.9+ achieved. This may take many iterations.`;
           </button>
         {/if}
 
-      {:else if step === 'setup'}
-        <!-- Setup: First time user - explain the process -->
-        <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-6 border-4 border-chalkboard shadow-crayon-lg max-w-lg relative">
-          <button onclick={() => step = 'bell'} class="absolute -top-3 -right-3 w-9 h-9 flex items-center justify-center rounded-full border-4 border-chalkboard bg-white text-chalkboard text-2xl font-bold shadow-crayon transition-all duration-150 hover:translate-x-1 hover:translate-y-1 hover:shadow-none z-10">
-            <span class="-mt-0.5">&times;</span>
-          </button>
-          <h2 class="font-chalk text-2xl text-chalkboard mb-2">Welcome to IdeaRalph!</h2>
-          <p class="text-chalkboard/70 text-sm mb-4">First time? Let's set you up in 1 minute.</p>
-
-          <div class="space-y-3 text-left mb-6">
-            <div class="flex items-start gap-3 p-3 bg-ralph-yellow/10 rounded-lg">
-              <span class="text-xl">1️⃣</span>
-              <div>
-                <div class="font-bold text-chalkboard">Add the MCP</div>
-                <div class="text-sm text-chalkboard/70">One command, then restart Claude</div>
-              </div>
-            </div>
-            <div class="flex items-start gap-3 p-3 bg-chalkboard/5 rounded-lg">
-              <span class="text-xl">2️⃣</span>
-              <div>
-                <div class="font-bold text-chalkboard/60">Just Talk!</div>
-                <div class="text-sm text-chalkboard/50">"Brainstorm ideas about X" — that's it</div>
-              </div>
-            </div>
-          </div>
-
-          <button onclick={() => step = 'install'} class="btn-crayon w-full text-lg">
-            Let's Go! →
-          </button>
-
-          <button
-            onclick={() => { markPluginInstalled(); step = 'run'; }}
-            class="w-full text-chalkboard/50 hover:text-chalkboard text-sm py-2 mt-2"
-          >
-            I already have the MCP installed →
-          </button>
-        </div>
-
       {:else if step === 'install'}
         <!-- Step 1: Install the MCP -->
         <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-6 border-4 border-chalkboard shadow-crayon-lg max-w-lg relative">
@@ -534,14 +496,16 @@ Don't stop until 9.9+ achieved. This may take many iterations.`;
             MCP = superpowers for Claude. Runs locally, no API key needed.
           </p>
 
-          <div class="flex gap-2">
-            <button onclick={() => step = 'setup'} class="btn-crayon flex-1 bg-gray-100 text-sm">
-              ← Back
-            </button>
-            <button onclick={() => { markPluginInstalled(); step = 'run'; }} class="btn-crayon flex-1 text-sm">
-              Done, Next →
-            </button>
-          </div>
+          <button onclick={() => { markPluginInstalled(); step = 'run'; }} class="btn-crayon w-full text-sm">
+            Done, Next →
+          </button>
+
+          <button
+            onclick={() => { markPluginInstalled(); step = 'run'; }}
+            class="w-full text-chalkboard/50 hover:text-chalkboard text-sm py-2 mt-2"
+          >
+            I already have it installed →
+          </button>
         </div>
 
       {:else if step === 'run'}
@@ -574,19 +538,13 @@ Don't stop until 9.9+ achieved. This may take many iterations.`;
 
           <div class="bg-ralph-yellow/20 rounded-lg p-3 mb-4">
             <p class="text-sm text-chalkboard">
-              <span class="font-bold">5 MCP Tools:</span> brainstorm • validate • refine • prd • architecture
+              <span class="font-bold">7 MCP Tools:</span> brainstorm • validate • iterate • prd • design • architecture • checklist
             </p>
           </div>
 
-          <button onclick={() => { markPluginInstalled(); step = 'bell'; }} class="btn-crayon w-full text-lg mb-3">
-            Got it!
+          <button onclick={() => { markPluginInstalled(); step = 'bell'; }} class="btn-crayon w-full text-lg">
+            Got it, let's go!
           </button>
-
-          <div class="flex gap-2">
-            <button onclick={() => step = 'install'} class="btn-crayon flex-1 bg-gray-100 text-sm">
-              ← Back
-            </button>
-          </div>
         </div>
 
       {:else if step === 'paste'}
