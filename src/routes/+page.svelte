@@ -1006,11 +1006,6 @@ Don't stop until 9.9+ achieved. This may take many iterations.`;
         </div>
       </div>
 
-      <div class="mt-8 text-center">
-        <p class="text-chalkboard/60 text-sm">
-          No API key needed • Runs locally • Works with Claude Code
-        </p>
-      </div>
     </div>
   </section>
 
