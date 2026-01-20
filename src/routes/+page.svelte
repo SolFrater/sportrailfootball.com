@@ -413,11 +413,16 @@ Don't stop until 9.9+ achieved. This may take many iterations.`;
         <!-- Initial State: Ring the Bell -->
         <button
           onclick={ringTheBell}
-          class="btn-crayon text-xl md:text-2xl px-10 py-5 flex items-center gap-4 mx-auto
-                 transform hover:scale-105 transition-transform"
+          class="btn-crayon text-xl md:text-2xl px-10 py-5 flex items-center gap-4 mx-auto"
         >
-          <span class="text-3xl md:text-4xl">🔔</span>
-          <span>Ring the Bell</span>
+          <!-- Crayon icon -->
+          <svg class="w-10 h-10 md:w-12 md:h-12" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M184,120,69.66,234.34a8,8,0,0,1-11.32,0L21.66,197.66a8,8,0,0,1,0-11.32L136,72Z"/>
+            <path d="M136,72l23-23a24,24,0,0,1,33.94,0l14.1,14.1a24,24,0,0,1,0,33.94L184,120"/>
+            <line x1="96" y1="112" x2="144" y2="160"/>
+            <path d="M221.66,90.34,192,120"/>
+          </svg>
+          <span>Unleash Ralph</span>
         </button>
         <div class="mt-3 inline-block bg-white/60 px-3 py-1 rounded-xl border border-chalkboard/20">
           <span class="text-chalkboard text-xs">Powered by your Claude Code • No API costs</span>
@@ -435,7 +440,7 @@ Don't stop until 9.9+ achieved. This may take many iterations.`;
       {:else if step === 'setup'}
         <!-- Setup: First time user - explain the process -->
         <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-6 border-4 border-chalkboard shadow-crayon-lg max-w-lg relative">
-          <button onclick={() => step = 'bell'} class="absolute -top-3 -right-3 w-9 h-9 flex items-center justify-center rounded-full border-4 border-chalkboard bg-white hover:bg-gray-100 text-chalkboard text-2xl font-bold shadow-lg transition-all z-10">
+          <button onclick={() => step = 'bell'} class="absolute -top-3 -right-3 w-9 h-9 flex items-center justify-center rounded-full border-4 border-chalkboard bg-white text-chalkboard text-2xl font-bold shadow-crayon transition-all duration-150 hover:translate-x-1 hover:translate-y-1 hover:shadow-none z-10">
             <span class="-mt-0.5">&times;</span>
           </button>
           <h2 class="font-chalk text-2xl text-chalkboard mb-2">Welcome to IdeaRalph!</h2>
@@ -473,7 +478,7 @@ Don't stop until 9.9+ achieved. This may take many iterations.`;
       {:else if step === 'install'}
         <!-- Step 1: Install the MCP -->
         <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-6 border-4 border-chalkboard shadow-crayon-lg max-w-lg relative">
-          <button onclick={() => step = 'bell'} class="absolute -top-3 -right-3 w-9 h-9 flex items-center justify-center rounded-full border-4 border-chalkboard bg-white hover:bg-gray-100 text-chalkboard text-2xl font-bold shadow-lg transition-all z-10">
+          <button onclick={() => step = 'bell'} class="absolute -top-3 -right-3 w-9 h-9 flex items-center justify-center rounded-full border-4 border-chalkboard bg-white text-chalkboard text-2xl font-bold shadow-crayon transition-all duration-150 hover:translate-x-1 hover:translate-y-1 hover:shadow-none z-10">
             <span class="-mt-0.5">&times;</span>
           </button>
           <div class="flex items-center gap-2 mb-4">
@@ -481,17 +486,10 @@ Don't stop until 9.9+ achieved. This may take many iterations.`;
             <h2 class="font-chalk text-xl text-chalkboard">Add the IdeaRalph MCP</h2>
           </div>
 
-          <p class="text-chalkboard/70 text-sm mb-3">Clone & build the MCP:</p>
-
-          <div class="bg-chalkboard rounded-lg p-3 mb-3 space-y-2">
-            <code class="block text-xs text-playground-green font-mono break-all">git clone https://github.com/vibeforge1111/vibeship-idearalph.git ~/idearalph</code>
-            <code class="block text-xs text-playground-green font-mono break-all">cd ~/idearalph/mcp-server && npm i && npm run build</code>
-          </div>
-
-          <p class="text-chalkboard/70 text-sm mb-2">Then add to Claude Code:</p>
+          <p class="text-chalkboard/70 text-sm mb-3">One command to install:</p>
 
           <div class="bg-chalkboard rounded-lg p-3 mb-3">
-            <code class="text-xs text-playground-green font-mono break-all">claude mcp add idearalph -- node ~/idearalph/mcp-server/dist/index.js</code>
+            <code class="block text-xs text-playground-green font-mono break-all leading-relaxed">git clone https://github.com/vibeforge1111/vibeship-idearalph.git ~/idearalph && cd ~/idearalph/mcp-server && npm i && npm run build && claude mcp add idearalph -- node ~/idearalph/mcp-server/dist/index.js</code>
           </div>
 
           <button
@@ -502,31 +500,21 @@ Don't stop until 9.9+ achieved. This may take many iterations.`;
             }}
             class="btn-crayon w-full text-sm mb-3"
           >
-            {copied ? '✅ Copied!' : '📋 Copy All Commands'}
+            {copied ? 'Copied!' : 'Copy Command'}
           </button>
 
-          <div class="bg-ralph-yellow/20 rounded-lg p-3 mb-4">
-            <p class="text-sm text-chalkboard mb-2">
-              <span class="font-bold">After adding:</span> Restart Claude Code
-            </p>
-            <div class="text-sm text-chalkboard/80">
-              <code class="bg-chalkboard/10 px-1 rounded">/exit</code> then <code class="bg-chalkboard/10 px-1 rounded">claude</code>
+          <div class="bg-ralph-yellow border-2 border-chalkboard rounded-lg p-4 mb-4">
+            <p class="text-base text-chalkboard font-bold mb-2">After running, restart Claude Code:</p>
+            <div class="flex items-center justify-center gap-3 text-base text-chalkboard">
+              <code class="bg-white/50 px-2 py-1 rounded font-bold">/exit</code>
+              <span>→</span>
+              <code class="bg-white/50 px-2 py-1 rounded font-bold">claude</code>
             </div>
           </div>
 
-          <div class="bg-sky-blue/10 rounded-lg p-3 mb-4">
-            <p class="text-sm text-chalkboard/80">
-              <span class="font-bold">What's an MCP?</span> It gives Claude superpowers. No API key needed — runs locally on your machine.
-            </p>
-            <a
-              href="https://github.com/vibeforge1111/vibeship-idearalph"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="inline-flex items-center gap-1 text-sm text-sky-blue hover:underline mt-2"
-            >
-              📦 View on GitHub →
-            </a>
-          </div>
+          <p class="text-xs text-chalkboard/60 mb-4">
+            MCP = superpowers for Claude. Runs locally, no API key needed.
+          </p>
 
           <div class="flex gap-2">
             <button onclick={() => step = 'setup'} class="btn-crayon flex-1 bg-gray-100 text-sm">
@@ -541,7 +529,7 @@ Don't stop until 9.9+ achieved. This may take many iterations.`;
       {:else if step === 'run'}
         <!-- Step 2: How to Use -->
         <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-6 border-4 border-chalkboard shadow-crayon-lg max-w-lg relative">
-          <button onclick={() => step = 'bell'} class="absolute -top-3 -right-3 w-9 h-9 flex items-center justify-center rounded-full border-4 border-chalkboard bg-white hover:bg-gray-100 text-chalkboard text-2xl font-bold shadow-lg transition-all z-10">
+          <button onclick={() => step = 'bell'} class="absolute -top-3 -right-3 w-9 h-9 flex items-center justify-center rounded-full border-4 border-chalkboard bg-white text-chalkboard text-2xl font-bold shadow-crayon transition-all duration-150 hover:translate-x-1 hover:translate-y-1 hover:shadow-none z-10">
             <span class="-mt-0.5">&times;</span>
           </button>
           <div class="flex items-center gap-2 mb-4">
@@ -573,7 +561,7 @@ Don't stop until 9.9+ achieved. This may take many iterations.`;
           </div>
 
           <button onclick={() => { markPluginInstalled(); step = 'bell'; }} class="btn-crayon w-full text-lg mb-3">
-            Got it! 🚀
+            Got it!
           </button>
 
           <div class="flex gap-2">
@@ -586,7 +574,7 @@ Don't stop until 9.9+ achieved. This may take many iterations.`;
       {:else if step === 'paste'}
         <!-- Step 3: Paste the result -->
         <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-6 border-4 border-chalkboard shadow-crayon-lg max-w-lg relative">
-          <button onclick={() => step = 'bell'} class="absolute -top-3 -right-3 w-9 h-9 flex items-center justify-center rounded-full border-4 border-chalkboard bg-white hover:bg-gray-100 text-chalkboard text-2xl font-bold shadow-lg transition-all z-10">
+          <button onclick={() => step = 'bell'} class="absolute -top-3 -right-3 w-9 h-9 flex items-center justify-center rounded-full border-4 border-chalkboard bg-white text-chalkboard text-2xl font-bold shadow-crayon transition-all duration-150 hover:translate-x-1 hover:translate-y-1 hover:shadow-none z-10">
             <span class="-mt-0.5">&times;</span>
           </button>
           <div class="flex items-center gap-2 mb-4">
@@ -619,7 +607,7 @@ Don't stop until 9.9+ achieved. This may take many iterations.`;
       {:else if step === 'result' && currentIdea}
         <!-- Step 3: Display the result with PMF Analysis -->
         <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-6 border-4 border-chalkboard shadow-crayon-lg max-w-2xl mx-auto relative">
-          <button onclick={startOver} class="absolute -top-3 -right-3 w-9 h-9 flex items-center justify-center rounded-full border-4 border-chalkboard bg-white hover:bg-gray-100 text-chalkboard text-2xl font-bold shadow-lg transition-all z-10">
+          <button onclick={startOver} class="absolute -top-3 -right-3 w-9 h-9 flex items-center justify-center rounded-full border-4 border-chalkboard bg-white text-chalkboard text-2xl font-bold shadow-crayon transition-all duration-150 hover:translate-x-1 hover:translate-y-1 hover:shadow-none z-10">
             <span class="-mt-0.5">&times;</span>
           </button>
           <div class="text-left">
@@ -698,7 +686,7 @@ Don't stop until 9.9+ achieved. This may take many iterations.`;
       {:else if step === 'prd' && currentIdea}
         <!-- PRD View -->
         <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-6 border-4 border-chalkboard shadow-crayon-lg max-w-2xl mx-auto relative">
-          <button onclick={startOver} class="absolute -top-3 -right-3 w-9 h-9 flex items-center justify-center rounded-full border-4 border-chalkboard bg-white hover:bg-gray-100 text-chalkboard text-2xl font-bold shadow-lg transition-all z-10">
+          <button onclick={startOver} class="absolute -top-3 -right-3 w-9 h-9 flex items-center justify-center rounded-full border-4 border-chalkboard bg-white text-chalkboard text-2xl font-bold shadow-crayon transition-all duration-150 hover:translate-x-1 hover:translate-y-1 hover:shadow-none z-10">
             <span class="-mt-0.5">&times;</span>
           </button>
           <div class="flex items-center justify-between mb-4">
@@ -802,7 +790,13 @@ Don't stop until 9.9+ achieved. This may take many iterations.`;
                    border-4 border-chalkboard shadow-crayon
                    transition-transform group-hover:scale-110 group-hover:rotate-3"
           >
-            <span class="text-3xl">⚡</span>
+            <!-- Terminal icon - outline style -->
+            <svg class="w-10 h-10" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="32" y="48" width="192" height="160" rx="8"/>
+              <line x1="32" y1="96" x2="224" y2="96"/>
+              <polyline points="80,128 112,152 80,176"/>
+              <line x1="128" y1="176" x2="176" y2="176"/>
+            </svg>
           </div>
           <h3 class="font-chalk text-xl mt-3">1. Add the MCP</h3>
           <p class="ralph-voice text-chalkboard text-base whitespace-nowrap">"One command!"</p>
@@ -819,7 +813,11 @@ Don't stop until 9.9+ achieved. This may take many iterations.`;
                    border-4 border-chalkboard shadow-crayon
                    transition-transform group-hover:scale-110 group-hover:-rotate-3"
           >
-            <span class="text-3xl">🔄</span>
+            <!-- Power/restart icon - outline style -->
+            <svg class="w-10 h-10" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="128" y1="48" x2="128" y2="124"/>
+              <path d="M176,56a88,88,0,1,1-96,0"/>
+            </svg>
           </div>
           <h3 class="font-chalk text-xl mt-3">2. Restart Claude</h3>
           <p class="ralph-voice text-chalkboard text-base whitespace-nowrap">"/exit then claude"</p>
@@ -836,7 +834,13 @@ Don't stop until 9.9+ achieved. This may take many iterations.`;
                    border-4 border-chalkboard shadow-crayon
                    transition-transform group-hover:scale-110 group-hover:rotate-3"
           >
-            <span class="text-3xl">💬</span>
+            <!-- Chat icon - outline style with dots -->
+            <svg class="w-10 h-10" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M216,48H40a8,8,0,0,0-8,8V192a8,8,0,0,0,8,8H80l32,32,32-32h72a8,8,0,0,0,8-8V56A8,8,0,0,0,216,48Z"/>
+              <circle cx="88" cy="120" r="8" fill="currentColor"/>
+              <circle cx="128" cy="120" r="8" fill="currentColor"/>
+              <circle cx="168" cy="120" r="8" fill="currentColor"/>
+            </svg>
           </div>
           <h3 class="font-chalk text-xl mt-3">3. Just Talk!</h3>
           <p class="ralph-voice text-chalkboard text-base whitespace-nowrap">"Brainstorm ideas..."</p>
@@ -872,7 +876,7 @@ Don't stop until 9.9+ achieved. This may take many iterations.`;
         </div>
 
         <div class="bg-paper rounded-xl p-5 border-2 border-chalkboard/20 shadow-crayon">
-          <div class="text-2xl mb-2">🔄</div>
+          <div class="text-2xl mb-2">🌀</div>
           <h3 class="font-chalk text-lg text-chalkboard mb-1">Refine</h3>
           <p class="text-sm text-chalkboard/70">"Make this idea score 9.5+"</p>
           <p class="text-xs text-chalkboard/50 mt-2">Ralph Loop until it's dope</p>

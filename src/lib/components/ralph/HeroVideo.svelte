@@ -31,15 +31,17 @@
 
 {#if size === 'half' || size === 'full'}
   <!-- BANNER MODE: Video as background with overlay content -->
-  <div class="hero-banner relative overflow-hidden {size === 'full' ? 'min-h-screen' : 'h-[50vh]'} bg-chalkboard">
+  <div class="hero-banner relative overflow-visible {size === 'full' ? 'min-h-screen' : 'min-h-[55vh]'} bg-chalkboard">
     <!-- Video Background Layer -->
-    <div class="absolute inset-0 z-0">
+    <div class="absolute inset-0 z-0 overflow-hidden">
       <video
         autoplay
         loop
         muted
         playsinline
-        class="w-full h-full object-cover"
+        preload="auto"
+        disablepictureinpicture
+        class="w-full h-full object-cover will-change-auto"
       >
         <source src={src} type="video/mp4" />
       </video>
@@ -49,7 +51,7 @@
     </div>
 
     <!-- Content Overlay Layer -->
-    <div class="relative z-20 h-full flex flex-col items-center justify-end px-4 pb-8 pt-8">
+    <div class="relative z-20 min-h-[55vh] flex flex-col items-center justify-end px-4 pt-8 pb-6">
       {#if children}
         {@render children()}
       {/if}
