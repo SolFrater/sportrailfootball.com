@@ -1095,9 +1095,25 @@ Don't stop until 9.9+ achieved. This may take many iterations.`;
         <!-- Left: IdeaRalph + Legal -->
         <div class="flex flex-col md:flex-row items-center gap-4">
           <div class="flex items-center gap-2">
-            <div class="w-8 h-8 bg-ralph-yellow rounded-full border-2 border-chalkboard overflow-hidden">
-              <img src="/images/ralph-logo.png" alt="Ralph" class="w-full h-full object-cover" />
-            </div>
+            <svg class="w-8 h-8" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="12" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="128" cy="128" r="120" fill="#FFD93D" stroke="none"/>
+              <line x1="128" y1="48" x2="128" y2="16"/>
+              <line x1="128" y1="208" x2="128" y2="240"/>
+              <line x1="48" y1="128" x2="16" y2="128"/>
+              <line x1="208" y1="128" x2="240" y2="128"/>
+              <line x1="68" y1="68" x2="44" y2="44"/>
+              <line x1="188" y1="68" x2="212" y2="44"/>
+              <line x1="68" y1="188" x2="44" y2="212"/>
+              <line x1="188" y1="188" x2="212" y2="212"/>
+              <circle cx="128" cy="128" r="72"/>
+              <path d="M80,72 Q90,56 100,72" fill="none"/>
+              <path d="M116,64 Q128,48 140,64" fill="none"/>
+              <path d="M156,72 Q166,56 176,72" fill="none"/>
+              <circle cx="104" cy="118" r="12" fill="currentColor"/>
+              <circle cx="152" cy="122" r="12" fill="currentColor"/>
+              <circle cx="128" cy="140" r="4" fill="currentColor"/>
+              <path d="M100,160 Q128,184 156,160" fill="none"/>
+            </svg>
             <span class="font-chalk text-chalkboard">IdeaRalph</span>
           </div>
           <div class="flex items-center gap-2 text-xs text-chalkboard/40">
