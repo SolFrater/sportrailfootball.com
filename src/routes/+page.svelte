@@ -922,9 +922,9 @@ Don't stop until 9.9+ achieved. This may take many iterations.`;
 
       <!-- MCP Note -->
       <div class="flex justify-center mt-8">
-        <div class="inline-block bg-white px-4 py-2 rounded-lg border-2 border-chalkboard/20 shadow-sm">
-          <p class="text-chalkboard/70 text-sm">
-            Get the MCP install command from the <a href="#unleash-ralph" class="font-bold text-chalkboard hover:text-ralph-yellow transition-colors">Unleash Ralph</a> button above
+        <div class="inline-block bg-white px-4 py-2 rounded-lg border-3 border-chalkboard shadow-crayon">
+          <p class="text-chalkboard text-sm">
+            Get the MCP install command from the <a href="#unleash-ralph" class="font-bold hover:text-ralph-yellow transition-colors">Unleash Ralph</a> button above
           </p>
         </div>
       </div>
