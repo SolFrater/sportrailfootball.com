@@ -515,8 +515,8 @@ Don't stop until 9.9+ achieved. This may take many iterations.`;
               Mac: <code class="bg-chalkboard/10 px-1 rounded text-xs">~/Library/Application Support/Claude/claude_desktop_config.json</code><br/>
               Win: <code class="bg-chalkboard/10 px-1 rounded text-xs">%APPDATA%\Claude\claude_desktop_config.json</code>
             </p>
-            <div class="bg-chalkboard rounded-lg p-2 mb-3">
-              <pre class="text-xs text-playground-green font-mono overflow-x-auto">{`{
+            <div class="bg-chalkboard rounded-lg p-2 mb-3 text-left">
+              <pre class="text-xs text-playground-green font-mono overflow-x-auto whitespace-pre text-left">{`{
   "mcpServers": {
     "idearalph": {
       "command": "node",
