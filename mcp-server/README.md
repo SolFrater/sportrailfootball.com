@@ -1,13 +1,17 @@
 # IdeaRalph MCP Server v2.2
 
-AI-powered startup idea generation, validation, and refinement - designed for Claude Code.
+AI-powered startup idea generation, validation, and refinement for vibe coders.
 
 **No API key required!** This MCP works natively inside Claude Code.
 
 ## Quick Install
 
 ```bash
+# IdeaRalph + Spawner skills (recommended)
 npx github:vibeforge1111/vibeship-idearalph install --with-spawner
+
+# IdeaRalph only
+npx github:vibeforge1111/vibeship-idearalph install
 ```
 
 Works on Mac, Linux, and Windows. Restart Claude Code after installation.
@@ -53,47 +57,21 @@ Brainstorm → Validate → Refine → PRD → Design → Architecture → Check
 6. **Architecture**: Get tech stack and Spawner skills for building
 7. **Checklist**: YC-level launch checklist (security, legal, growth)
 
-## Standalone Installation
+## Manual Installation
 
-If you only want IdeaRalph (without Spawner skills):
-
-### Prerequisites
-- Node.js 18+
-- Claude Code
-
-### Build the Server
+If you prefer to install manually:
 
 ```bash
-cd mcp-server
-npm install
-npm run build
+# Clone and build
+git clone https://github.com/vibeforge1111/vibeship-idearalph.git
+cd vibeship-idearalph/mcp-server
+npm install && npm run build
+
+# Add to Claude Code
+claude mcp add idearalph -- node $(pwd)/dist/index.js
 ```
 
-### Configure Claude Code
-
-Add to your Claude Code MCP settings:
-
-**Mac/Linux**: `~/.claude/claude_desktop_config.json`
-**Windows**: `%APPDATA%\Claude\claude_desktop_config.json`
-
-```json
-{
-  "mcpServers": {
-    "idearalph": {
-      "command": "node",
-      "args": ["/path/to/vibeship-idearalph/mcp-server/dist/index.js"]
-    }
-  }
-}
-```
-
-That's it! No API key needed.
-
-### Alternative: Claude Code CLI
-
-```bash
-claude mcp add idearalph -- node /path/to/mcp-server/dist/index.js
-```
+Requires Node.js 18+ and Claude Code.
 
 ## Usage Examples
 
