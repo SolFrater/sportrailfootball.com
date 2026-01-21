@@ -450,21 +450,38 @@ Don't stop until 9.9+ achieved. This may take many iterations.`;
             <h2 class="font-chalk text-xl text-chalkboard">Add the IdeaRalph MCP</h2>
           </div>
 
-          <p class="text-chalkboard/70 text-sm mb-3">One command to install:</p>
+          <p class="text-chalkboard/70 text-sm mb-3">IdeaRalph + Spawner skills (recommended):</p>
 
-          <div class="bg-chalkboard rounded-lg p-3 mb-3">
-            <code class="block text-xs text-playground-green font-mono break-all leading-relaxed">git clone https://github.com/vibeforge1111/vibeship-idearalph.git ~/idearalph && cd ~/idearalph/mcp-server && npm i && npm run build && claude mcp add idearalph -- node ~/idearalph/mcp-server/dist/index.js</code>
+          <div class="bg-chalkboard rounded-lg p-3 mb-2">
+            <code class="block text-sm text-playground-green font-mono">npx github:vibeforge1111/vibeship-idearalph install --with-spawner</code>
           </div>
 
           <button
             onclick={() => {
-              navigator.clipboard.writeText('git clone https://github.com/vibeforge1111/vibeship-idearalph.git ~/idearalph && cd ~/idearalph/mcp-server && npm i && npm run build && claude mcp add idearalph -- node ~/idearalph/mcp-server/dist/index.js');
+              navigator.clipboard.writeText('npx github:vibeforge1111/vibeship-idearalph install --with-spawner');
               copied = true;
               setTimeout(() => copied = false, 2000);
             }}
-            class="btn-crayon w-full text-sm mb-3 {copied ? 'bg-playground-green' : ''}"
+            class="btn-crayon w-full text-sm mb-4 {copied ? 'bg-playground-green' : ''}"
           >
             {copied ? '✓ Copied!' : 'Copy Command'}
+          </button>
+
+          <p class="text-chalkboard/50 text-xs mb-2">Or IdeaRalph only:</p>
+
+          <div class="bg-chalkboard/80 rounded-lg p-2 mb-2">
+            <code class="block text-xs text-playground-green/80 font-mono">npx github:vibeforge1111/vibeship-idearalph install</code>
+          </div>
+
+          <button
+            onclick={() => {
+              navigator.clipboard.writeText('npx github:vibeforge1111/vibeship-idearalph install');
+              copied = true;
+              setTimeout(() => copied = false, 2000);
+            }}
+            class="btn-crayon w-full text-xs mb-3 bg-gray-100 {copied ? 'bg-playground-green' : ''}"
+          >
+            {copied ? '✓ Copied!' : 'Copy IdeaRalph Only'}
           </button>
 
           <div class="bg-ralph-yellow border-2 border-chalkboard rounded-lg p-4 mb-4">
