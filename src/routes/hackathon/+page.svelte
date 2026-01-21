@@ -165,8 +165,8 @@
 
       <!-- 3 Step Flow -->
       <div class="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-8 mb-10">
-        <div class="flex flex-col items-center text-center">
-          <div class="w-16 h-16 bg-ralph-yellow rounded-full flex items-center justify-center border-3 border-chalkboard shadow-crayon mb-2">
+        <button class="flex flex-col items-center text-center group cursor-pointer">
+          <div class="w-16 h-16 bg-ralph-yellow rounded-full flex items-center justify-center border-4 border-chalkboard shadow-crayon mb-2 transition-all duration-150 group-hover:translate-x-1 group-hover:translate-y-1 group-hover:shadow-none group-hover:rotate-3">
             <!-- Build icon - hammer -->
             <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
@@ -174,11 +174,11 @@
           </div>
           <span class="font-chalk text-lg">Build</span>
           <span class="text-xs text-chalkboard/60">Vibe code your app</span>
-        </div>
+        </button>
         <span class="text-2xl text-chalkboard/30 hidden md:block">→</span>
         <span class="text-2xl text-chalkboard/30 md:hidden rotate-90">→</span>
-        <div class="flex flex-col items-center text-center">
-          <div class="w-16 h-16 bg-playground-green rounded-full flex items-center justify-center border-3 border-chalkboard shadow-crayon mb-2">
+        <button class="flex flex-col items-center text-center group cursor-pointer">
+          <div class="w-16 h-16 bg-playground-green rounded-full flex items-center justify-center border-4 border-chalkboard shadow-crayon mb-2 transition-all duration-150 group-hover:translate-x-1 group-hover:translate-y-1 group-hover:shadow-none group-hover:-rotate-3">
             <!-- Grow icon - sprout -->
             <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M7 20h10"/>
@@ -191,11 +191,11 @@
           </div>
           <span class="font-chalk text-lg">Grow</span>
           <span class="text-xs text-chalkboard/60">Build your audience</span>
-        </div>
+        </button>
         <span class="text-2xl text-chalkboard/30 hidden md:block">→</span>
         <span class="text-2xl text-chalkboard/30 md:hidden rotate-90">→</span>
-        <div class="flex flex-col items-center text-center">
-          <div class="w-16 h-16 bg-purple-400 rounded-full flex items-center justify-center border-3 border-chalkboard shadow-crayon mb-2">
+        <button class="flex flex-col items-center text-center group cursor-pointer">
+          <div class="w-16 h-16 bg-purple-400 rounded-full flex items-center justify-center border-4 border-chalkboard shadow-crayon mb-2 transition-all duration-150 group-hover:translate-x-1 group-hover:translate-y-1 group-hover:shadow-none group-hover:rotate-3">
             <!-- Launch icon - rocket -->
             <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/>
@@ -206,7 +206,7 @@
           </div>
           <span class="font-chalk text-lg">Launch</span>
           <span class="text-xs text-chalkboard/60">On vibe/vibe</span>
-        </div>
+        </button>
       </div>
     </div>
   </section>
@@ -502,7 +502,7 @@
               <circle cx="128" cy="140" r="4" fill="currentColor"/>
               <path d="M100,160 Q128,184 156,160" fill="none"/>
             </svg>
-            vibe/vibe
+            IdeaRalph
           </a>
           <div class="flex items-center gap-2 text-xs text-chalkboard/40">
             <a href="/" class="hover:text-chalkboard/70 transition-colors">Home</a>
