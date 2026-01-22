@@ -1,7 +1,6 @@
 <script lang="ts">
-  import { pools, portfolio, ralphQuote, items, gasMultiplier, buyAudit, buyInsurance } from '../../stores/gameStore.svelte';
+  import { pools, portfolio, ralphQuote, items, gasMultiplier, buyAudit, buyInsurance, halvingMultiplier, halvingTimeRemaining, gameState } from '../../stores/gameStore.svelte';
   import { GAME_CONSTANTS } from '../../../data/constants';
-  import TopBar from '../TopBar.svelte';
   import BottomBar from '../BottomBar.svelte';
   import PoolCard from '../PoolCard.svelte';
   import Toast from '../Toast.svelte';
@@ -11,6 +10,10 @@
   const quote = $derived(ralphQuote.value);
   const itemsVal = $derived(items.value);
   const gasMult = $derived(gasMultiplier.value);
+  const halvingMult = $derived(halvingMultiplier.value);
+  const game = $derived(gameState.value);
+  const halvingTime = $derived(halvingTimeRemaining());
+  const halvingUrgent = $derived(halvingTime < 60000);
 
   const auditCost = $derived(GAME_CONSTANTS.AUDIT_COST * gasMult);
   const insuranceCost = $derived(GAME_CONSTANTS.INSURANCE_COST * gasMult);
@@ -24,6 +27,13 @@
       return `$${(amount / 1_000).toFixed(1)}K`;
     }
     return `$${amount.toFixed(0)}`;
+  }
+
+  function formatTime(ms: number): string {
+    const totalSeconds = Math.floor(ms / 1000);
+    const minutes = Math.floor(totalSeconds / 60);
+    const seconds = totalSeconds % 60;
+    return `${minutes}:${seconds.toString().padStart(2, '0')}`;
   }
 </script>
 
@@ -42,7 +52,7 @@
     <!-- Header Section -->
     <header class="flex-shrink-0" style="padding: 20px 32px;">
       <!-- Top Row: Logo, Power-ups, Wallet -->
-      <div class="flex items-center justify-between" style="margin-bottom: 12px;">
+      <div class="flex items-center justify-between" style="margin-bottom: 16px;">
         <!-- Logo & Title -->
         <div class="flex items-center gap-3">
           <img src="/ralph-logo.png" alt="Ralph" class="w-10 h-10 rounded-lg object-cover" />
@@ -91,21 +101,64 @@
         </div>
       </div>
 
-      <!-- Ralph Notification Banner -->
-      <div class="rounded-lg flex items-center" style="padding: 10px 16px; background: #2d2d3a; gap: 12px;">
-        <span class="text-purple-300 font-semibold" style="font-size: 12px;">Ralph:</span>
-        <p class="text-white/70 italic" style="font-size: 13px; flex: 1;">"{quote}"</p>
+      <!-- Second Row: Ralph (left) | Stats (right) -->
+      <div style="display: flex; gap: 16px;">
+        <!-- Ralph Notification Banner - Left Half -->
+        <div class="rounded-lg flex items-center" style="flex: 1; padding: 10px 16px; background: #2d2d3a; gap: 10px;">
+          <span class="text-purple-300 font-semibold" style="font-size: 11px;">Ralph:</span>
+          <p class="text-white/70 italic" style="font-size: 12px; flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">"{quote}"</p>
+        </div>
+
+        <!-- Stats Panel - Right Half -->
+        <div class="rounded-lg flex items-center" style="flex: 1; padding: 10px 16px; background: #2d2d3a; gap: 16px; justify-content: center;">
+          <!-- Halving -->
+          <div class="flex items-center" style="gap: 6px;">
+            <span class="text-white/40" style="font-size: 10px;">Halving</span>
+            <span class="font-mono font-semibold {halvingUrgent ? 'text-red-400' : 'text-amber-400'}" style="font-size: 13px;">
+              {formatTime(halvingTime)}
+            </span>
+          </div>
+
+          <div style="width: 1px; height: 16px; background: rgba(255,255,255,0.15);"></div>
+
+          <!-- Multiplier -->
+          <div class="flex items-center" style="gap: 6px;">
+            <span class="text-white/40" style="font-size: 10px;">Mult</span>
+            <span class="font-mono font-semibold text-purple-400" style="font-size: 13px;">{halvingMult.toFixed(2)}x</span>
+          </div>
+
+          <div style="width: 1px; height: 16px; background: rgba(255,255,255,0.15);"></div>
+
+          <!-- Target -->
+          <div class="flex items-center" style="gap: 6px;">
+            <span class="text-white/40" style="font-size: 10px;">Target</span>
+            <span class="font-mono font-semibold text-white/80" style="font-size: 13px;">{formatMoney(GAME_CONSTANTS.WIN_PORTFOLIO)}</span>
+          </div>
+
+          <!-- Gas indicator (only when active) -->
+          {#if gasMult > 1}
+            <div style="width: 1px; height: 16px; background: rgba(255,255,255,0.15);"></div>
+            <div class="flex items-center" style="gap: 4px;">
+              <span style="font-size: 12px;">⛽</span>
+              <span class="text-orange-400 font-semibold" style="font-size: 11px;">{gasMult}x</span>
+            </div>
+          {/if}
+
+          <!-- Whale indicator (only when active) -->
+          {#if game.whaleEndTime && Date.now() < game.whaleEndTime}
+            <div style="width: 1px; height: 16px; background: rgba(255,255,255,0.15);"></div>
+            <div class="flex items-center" style="gap: 4px;">
+              <span style="font-size: 12px;">🐋</span>
+              <span class="text-blue-400 font-semibold" style="font-size: 11px;">Active</span>
+            </div>
+          {/if}
+        </div>
       </div>
     </header>
 
-    <!-- Top Stats Bar - Full width, edge-to-edge -->
-    <div class="flex-shrink-0">
-      <TopBar />
-    </div>
-
     <!-- Scrollable Pool Grid - Centered -->
     <div class="flex-1 overflow-y-auto" style="padding-bottom: 32px;">
-      <div class="flex flex-col items-center" style="padding: 48px 32px 0 32px;">
+      <div class="flex flex-col items-center" style="padding: 32px 32px 0 32px;">
         <!-- Section Header -->
         <div class="flex items-center justify-center mb-6">
           <div class="flex items-center gap-4">
