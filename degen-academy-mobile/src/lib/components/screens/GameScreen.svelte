@@ -64,7 +64,7 @@
         </div>
 
         <!-- Pool Grid - 2 cards per row, centered -->
-        <div class="w-full max-w-3xl grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div class="w-full max-w-5xl grid grid-cols-1 lg:grid-cols-2 gap-8">
           {#each poolList as pool (pool.id)}
             <PoolCard {pool} />
           {/each}
