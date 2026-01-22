@@ -24,12 +24,12 @@
     <!-- Fixed Header -->
     <header class="flex-shrink-0 py-8">
       <div class="max-w-3xl mx-auto px-8">
-        <div class="flex items-center justify-between">
-          <div class="flex items-center gap-4">
+        <div class="flex flex-col items-center text-center">
+          <div class="flex items-center gap-4 mb-3">
             <div class="w-11 h-11 bg-gray-900 flex items-center justify-center rounded-lg">
               <span class="text-xl">🐕</span>
             </div>
-            <div>
+            <div class="text-left">
               <h1 class="text-xl font-bold text-white">Ralph's Degen Academy</h1>
               <p class="text-purple-300/80 text-sm">Learn to survive DeFi</p>
             </div>
@@ -55,15 +55,15 @@
     <div class="flex-1 overflow-y-auto pb-8">
       <div class="max-w-3xl mx-auto px-8">
         <!-- Section Header -->
-        <div class="flex items-center justify-between mb-6">
+        <div class="flex items-center justify-center mb-6">
           <div class="flex items-center gap-3">
             <h2 class="text-white font-medium">Liquidity Pools</h2>
             <span class="text-gray-400 text-xs px-2 py-1 bg-white/10 border border-white/10 rounded">{poolList.length} Active</span>
           </div>
         </div>
 
-        <!-- Pool Grid - 2 cards per row -->
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <!-- Pool Grid - 2 cards per row, centered -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 justify-items-center">
           {#each poolList as pool (pool.id)}
             <PoolCard {pool} />
           {/each}

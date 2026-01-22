@@ -34,7 +34,7 @@
 </script>
 
 <div
-  class="bg-white rounded-lg border-2 overflow-hidden transition-all duration-200
+  class="w-full bg-white rounded-lg border-2 overflow-hidden transition-all duration-200
          {pool.isRugged ? 'opacity-50 border-gray-200' : 'border-gray-200 hover:border-gray-300 hover:shadow-lg'}
          {pool.isPumping ? 'border-emerald-400 shadow-lg' : ''}"
 >
