@@ -17,9 +17,9 @@
   const canWithdraw = $derived(!pool.isRugged && pool.deposited > 0);
 
   const riskConfig = {
-    safe: { label: 'Low Risk', color: 'text-emerald-600', bg: 'bg-emerald-100', border: 'border-emerald-300' },
-    medium: { label: 'Medium', color: 'text-amber-600', bg: 'bg-amber-100', border: 'border-amber-300' },
-    degen: { label: 'High Risk', color: 'text-rose-600', bg: 'bg-rose-100', border: 'border-rose-300' },
+    safe: { label: 'Low Risk', color: 'text-emerald-400', bg: 'bg-emerald-500/20', border: 'border-emerald-500/40' },
+    medium: { label: 'Medium', color: 'text-amber-400', bg: 'bg-amber-500/20', border: 'border-amber-500/40' },
+    degen: { label: 'High Risk', color: 'text-rose-400', bg: 'bg-rose-500/20', border: 'border-rose-500/40' },
   };
 
   const config = $derived(riskConfig[pool.riskLevel]);
@@ -34,55 +34,55 @@
 </script>
 
 <div
-  class="w-full bg-white rounded-lg border-2 overflow-hidden transition-all duration-200
-         {pool.isRugged ? 'opacity-50 border-gray-200' : 'border-gray-200 hover:border-gray-300 hover:shadow-lg'}
-         {pool.isPumping ? 'border-emerald-400 shadow-lg' : ''}"
+  class="w-full bg-slate-900/60 backdrop-blur-lg rounded-lg border overflow-hidden transition-all duration-200
+         {pool.isRugged ? 'opacity-50 border-white/10' : 'border-white/10 hover:border-white/20 hover:bg-slate-900/70'}
+         {pool.isPumping ? 'border-emerald-500/50 shadow-lg shadow-emerald-500/10' : ''}"
 >
-  <div class="p-8">
+  <div class="p-6">
     <!-- Header Row -->
-    <div class="flex items-center justify-between mb-8">
+    <div class="flex items-center justify-between mb-6">
       <!-- Token Info -->
-      <div class="flex items-center gap-4">
-        <div class="w-12 h-12 rounded-md bg-gray-100 border border-gray-200 flex items-center justify-center text-2xl">
+      <div class="flex items-center gap-3">
+        <div class="w-11 h-11 rounded-lg bg-white/10 border border-white/10 flex items-center justify-center text-2xl">
           {pool.emoji}
         </div>
         <div>
-          <h3 class="font-bold text-gray-900">{pool.name}</h3>
-          <p class="text-gray-400 text-sm">/ USDC</p>
+          <h3 class="font-bold text-white">{pool.name}</h3>
+          <p class="text-white/40 text-sm">/ USDC</p>
         </div>
       </div>
 
       <!-- Risk Badge -->
-      <span class="px-2 py-1 text-xs font-semibold rounded {config.bg} {config.color}">
+      <span class="px-2 py-1 text-xs font-semibold rounded border {config.bg} {config.color} {config.border}">
         {config.label}
       </span>
     </div>
 
     <!-- Stats Row -->
-    <div class="flex items-center gap-8 mb-8">
+    <div class="flex items-center gap-6 mb-6">
       <!-- APR -->
       <div>
-        <p class="text-gray-400 text-xs uppercase tracking-wider mb-2">APR</p>
-        <p class="font-mono font-bold text-4xl text-gray-900">
+        <p class="text-white/40 text-xs uppercase tracking-wider mb-1">APR</p>
+        <p class="font-mono font-bold text-3xl text-white">
           {pool.apy}%
           {#if pool.isPumping}
-            <span class="text-emerald-500 text-xl ml-2">🔥</span>
+            <span class="text-emerald-400 text-lg ml-1">🔥</span>
           {/if}
         </p>
       </div>
 
       <!-- TVL -->
       <div>
-        <p class="text-gray-400 text-xs uppercase tracking-wider mb-2">TVL</p>
-        <p class="font-mono text-gray-600 text-2xl">{formatTVL(tvl)}</p>
+        <p class="text-white/40 text-xs uppercase tracking-wider mb-1">TVL</p>
+        <p class="font-mono text-white/70 text-xl">{formatTVL(tvl)}</p>
       </div>
     </div>
 
     <!-- Your Position Box -->
-    <div class="bg-gray-50 border border-gray-200 rounded-md p-5 mb-8">
+    <div class="bg-white/5 border border-white/10 rounded-lg p-4 mb-6">
       <div class="flex items-center justify-between">
-        <span class="text-gray-500 text-sm">Your Position</span>
-        <span class="font-mono text-gray-900 font-semibold">
+        <span class="text-white/50 text-sm">Your Position</span>
+        <span class="font-mono text-white font-semibold">
           ${pool.deposited.toLocaleString(undefined, { maximumFractionDigits: 0 })}
         </span>
       </div>
@@ -91,15 +91,14 @@
     <!-- Action Buttons -->
     {#if !pool.isRugged}
       <div class="flex gap-3">
-        <!-- Deposit Button - Black -->
+        <!-- Deposit Button -->
         <button
           onclick={() => deposit(pool.id, depositAmount)}
           disabled={!canDeposit}
-          class="flex-1 py-3 font-semibold text-sm rounded-md transition-all
-                 border-2 border-b-4 active:border-b-2 active:mt-[2px]
+          class="flex-1 py-3 font-semibold text-sm rounded-lg transition-all
                  {canDeposit
-                   ? 'bg-gray-900 border-gray-950 text-white hover:bg-gray-800'
-                   : 'bg-gray-100 border-gray-200 text-gray-400 cursor-not-allowed'}"
+                   ? 'bg-white text-gray-900 hover:bg-white/90'
+                   : 'bg-white/10 text-white/30 cursor-not-allowed'}"
         >
           Deposit +$1K
         </button>
@@ -108,18 +107,17 @@
         <button
           onclick={() => withdrawAll(pool.id)}
           disabled={!canWithdraw}
-          class="flex-1 py-3 font-semibold text-sm rounded-md transition-all
-                 border-2 border-b-4 active:border-b-2 active:mt-[2px]
+          class="flex-1 py-3 font-semibold text-sm rounded-lg transition-all border
                  {canWithdraw
-                   ? 'bg-white border-gray-300 text-gray-700 hover:bg-gray-50'
-                   : 'bg-gray-50 border-gray-200 text-gray-300 cursor-not-allowed'}"
+                   ? 'bg-transparent border-white/20 text-white hover:bg-white/10'
+                   : 'bg-transparent border-white/10 text-white/30 cursor-not-allowed'}"
         >
           Withdraw
         </button>
       </div>
     {:else}
-      <div class="py-3 bg-red-50 border border-red-200 rounded-md text-center">
-        <p class="text-red-600 font-semibold flex items-center justify-center gap-2">
+      <div class="py-3 bg-red-500/20 border border-red-500/30 rounded-lg text-center">
+        <p class="text-red-400 font-semibold flex items-center justify-center gap-2">
           <span>⚠️</span> Pool Rugged
         </p>
       </div>
