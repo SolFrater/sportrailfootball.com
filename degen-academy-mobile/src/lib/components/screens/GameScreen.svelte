@@ -193,7 +193,7 @@
 <style>
   /* Ralph panel */
   .ralph-panel {
-    padding: 12px 16px;
+    padding: 10px 14px;
     background: #2d2d3a;
     border-radius: 10px;
     border: 1px solid rgba(255,255,255,0.08);
@@ -204,7 +204,7 @@
     display: flex;
     align-items: center;
     gap: 6px;
-    padding: 10px 16px;
+    padding: 8px 12px;
     font-size: 12px;
     background: #3a3a4a;
     border: 1px solid rgba(255,255,255,0.1);
@@ -233,7 +233,7 @@
     display: flex;
     align-items: center;
     gap: 16px;
-    padding: 12px 20px;
+    padding: 10px 16px;
     background: #2d2d3a;
     border-radius: 10px;
     border: 1px solid rgba(255,255,255,0.08);
