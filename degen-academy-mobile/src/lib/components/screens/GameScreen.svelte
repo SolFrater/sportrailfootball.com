@@ -66,47 +66,43 @@
         </div>
 
         <!-- Controls -->
-        <div class="flex items-center" style="gap: 12px;">
+        <div class="flex items-center" style="gap: 10px;">
           <!-- Audit Button -->
           <button
             onclick={() => buyAudit()}
             disabled={!canAffordAudit}
-            class="action-btn"
+            class="header-btn"
             class:disabled={!canAffordAudit}
           >
-            <span style="font-size: 16px;">🛡️</span>
-            <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 1px;">
-              <span class="font-semibold" style="font-size: 12px; color: #fff;">Audit</span>
-              {#if itemsVal.audits > 0}
-                <span style="font-size: 10px; color: #a78bfa; font-weight: 600;">Owned: {itemsVal.audits}</span>
-              {:else}
-                <span style="font-size: 10px; color: rgba(255,255,255,0.5);">${auditCost.toFixed(0)}</span>
-              {/if}
-            </div>
+            <span>🛡️</span>
+            <span class="font-medium">Audit</span>
+            {#if itemsVal.audits > 0}
+              <span style="color: #a78bfa; font-weight: 700;">x{itemsVal.audits}</span>
+            {:else}
+              <span style="color: rgba(255,255,255,0.4);">${auditCost.toFixed(0)}</span>
+            {/if}
           </button>
 
           <!-- Insurance Button -->
           <button
             onclick={() => buyInsurance()}
             disabled={!canAffordInsurance}
-            class="action-btn"
+            class="header-btn"
             class:disabled={!canAffordInsurance}
           >
-            <span style="font-size: 16px;">🏥</span>
-            <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 1px;">
-              <span class="font-semibold" style="font-size: 12px; color: #fff;">Insurance</span>
-              {#if itemsVal.insurance > 0}
-                <span style="font-size: 10px; color: #4ade80; font-weight: 600;">Owned: {itemsVal.insurance}</span>
-              {:else}
-                <span style="font-size: 10px; color: rgba(255,255,255,0.5);">${insuranceCost.toFixed(0)}</span>
-              {/if}
-            </div>
+            <span>🏥</span>
+            <span class="font-medium">Insurance</span>
+            {#if itemsVal.insurance > 0}
+              <span style="color: #4ade80; font-weight: 700;">x{itemsVal.insurance}</span>
+            {:else}
+              <span style="color: rgba(255,255,255,0.4);">${insuranceCost.toFixed(0)}</span>
+            {/if}
           </button>
 
           <!-- Wallet -->
           <div class="wallet-display">
-            <span style="font-size: 10px; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.5px;">Wallet</span>
-            <span class="font-mono font-bold" style="font-size: 18px; color: #fff;">{formatMoney(portfolioVal)}</span>
+            <span style="font-size: 14px;">💰</span>
+            <span class="font-mono font-bold" style="font-size: 15px; color: #fff;">{formatMoney(portfolioVal)}</span>
           </div>
         </div>
       </div>
@@ -197,43 +193,44 @@
 </div>
 
 <style>
-  /* Action button - more visible */
-  .action-btn {
+  /* Header button - matches deposit button style */
+  .header-btn {
     display: flex;
     align-items: center;
-    gap: 10px;
-    padding: 10px 16px;
+    gap: 6px;
+    padding: 10px 14px;
+    font-size: 12px;
     background: #3a3a4a;
-    border: 1px solid rgba(255,255,255,0.15);
+    border: none;
     border-radius: 10px;
+    box-shadow: 3px 3px 6px #1e1e28, -2px -2px 5px #4a4a5a;
     transition: all 0.15s ease;
     cursor: pointer;
+    color: rgba(255,255,255,0.9);
   }
 
-  .action-btn:hover:not(.disabled) {
-    background: #454555;
-    border-color: rgba(255,255,255,0.25);
+  .header-btn:hover:not(.disabled) {
+    box-shadow: 2px 2px 4px #1e1e28, -1px -1px 3px #4a4a5a;
   }
 
-  .action-btn:active:not(.disabled) {
-    background: #353545;
+  .header-btn:active:not(.disabled) {
+    box-shadow: inset 3px 3px 6px #1e1e28, inset -2px -2px 5px #4a4a5a;
   }
 
-  .action-btn.disabled {
+  .header-btn.disabled {
     opacity: 0.4;
     cursor: not-allowed;
   }
 
-  /* Wallet display - prominent */
+  /* Wallet display - horizontal with icon */
   .wallet-display {
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 2px;
-    padding: 8px 16px;
-    background: #2d2d3a;
-    border: 1px solid rgba(255,255,255,0.1);
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+    background: #3a3a4a;
     border-radius: 10px;
+    box-shadow: 3px 3px 6px #1e1e28, -2px -2px 5px #4a4a5a;
   }
 
   /* Stats panel */
