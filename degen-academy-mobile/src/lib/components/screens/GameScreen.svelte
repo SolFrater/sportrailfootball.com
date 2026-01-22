@@ -80,13 +80,13 @@
           {#if notification}
             {@const colors = notificationColors[notification.type]}
             <div style="display: flex; align-items: center; gap: 10px; flex: 1; min-width: 0;">
-              <span class="font-bold" style="font-size: 12px; color: {colors.text};">{notification.title}</span>
-              <p style="font-size: 12px; color: {colors.text}; opacity: 0.9; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{notification.message}</p>
+              <span class="font-bold" style="font-size: 13px; color: {colors.text};">{notification.title}</span>
+              <p style="font-size: 13px; color: {colors.text}; opacity: 0.9; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{notification.message}</p>
             </div>
           {:else}
             <div style="display: flex; align-items: center; gap: 10px; flex: 1; min-width: 0;">
-              <span class="text-purple-300 font-semibold" style="font-size: 11px;">Ralph:</span>
-              <p class="text-white/70 italic" style="font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">"{quote}"</p>
+              <span class="font-semibold" style="font-size: 13px; color: #fff;">Ralph:</span>
+              <p class="italic" style="font-size: 13px; color: rgba(255,255,255,0.7); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">"{quote}"</p>
             </div>
           {/if}
 
