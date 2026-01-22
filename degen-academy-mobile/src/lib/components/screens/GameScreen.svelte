@@ -22,16 +22,11 @@
   <div class="relative z-10 flex-1 flex flex-col h-screen h-dvh overflow-hidden">
 
     <!-- Fixed Header - Left aligned -->
-    <header class="flex-shrink-0 py-8 px-8">
+    <header class="flex-shrink-0 py-6 px-8">
       <div class="flex items-center justify-between">
-        <div class="flex items-center gap-4">
-          <div class="w-11 h-11 bg-gray-900 flex items-center justify-center rounded-lg">
-            <span class="text-xl">🐕</span>
-          </div>
-          <div>
-            <h1 class="text-xl font-bold text-white">Ralph's Degen Academy</h1>
-            <p class="text-purple-300/80 text-sm">Learn to survive DeFi</p>
-          </div>
+        <div class="flex items-center gap-3">
+          <img src="/ralph-logo.png" alt="Ralph" class="w-12 h-12 rounded-lg object-cover" />
+          <h1 class="text-xl font-bold text-white">Ralph's Degen Academy</h1>
         </div>
 
         <!-- Connected Badge -->
