@@ -54,11 +54,11 @@
 
     <!-- Scrollable Pool Grid - Centered -->
     <div class="flex-1 overflow-y-auto pb-8">
-      <div class="flex flex-col items-center px-8">
+      <div class="flex flex-col items-center px-8 pt-8">
         <!-- Section Header -->
-        <div class="flex items-center justify-center mb-6">
-          <div class="flex items-center gap-3">
-            <h2 class="text-white font-medium">Liquidity Pools</h2>
+        <div class="flex items-center justify-center mb-8">
+          <div class="flex items-center gap-4">
+            <h2 class="text-white font-semibold text-lg">Liquidity Pools</h2>
             <span class="text-gray-400 text-xs px-2 py-1 bg-white/10 border border-white/10 rounded">{poolList.length} Active</span>
           </div>
         </div>
