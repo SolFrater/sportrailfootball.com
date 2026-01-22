@@ -27,19 +27,19 @@
   }
 </script>
 
-<div class="bg-white rounded-lg border-2 border-gray-200 p-6">
+<div class="bg-slate-900/70 backdrop-blur-xl rounded-lg border border-white/10 p-8">
   <!-- Main Stats Row -->
-  <div class="flex items-center justify-between gap-6 mb-6">
+  <div class="flex items-center justify-between gap-8 mb-8">
     <!-- Portfolio Value -->
     <div>
-      <p class="text-gray-400 text-xs uppercase tracking-wider mb-2">Total Value</p>
+      <p class="text-white/50 text-xs uppercase tracking-wider mb-2">Total Value</p>
       <div class="flex items-center gap-4">
-        <p class="font-mono font-bold text-4xl text-gray-900">{formatMoney(portfolioVal)}</p>
+        <p class="font-mono font-bold text-4xl text-white">{formatMoney(portfolioVal)}</p>
 
         <!-- Yield Badge -->
-        <div class="flex items-center gap-2 px-4 py-2 bg-emerald-100 border-2 border-emerald-300 rounded-lg">
-          <div class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></div>
-          <span class="text-emerald-700 font-mono font-bold text-sm">+{formatMoney(totalYieldPerSecond())}/s</span>
+        <div class="flex items-center gap-2 px-4 py-2 bg-emerald-500/20 border border-emerald-500/40 rounded-lg">
+          <div class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></div>
+          <span class="text-emerald-400 font-mono font-bold text-sm">+{formatMoney(totalYieldPerSecond())}/s</span>
         </div>
       </div>
     </div>
@@ -47,36 +47,36 @@
     <!-- Stats Pills -->
     <div class="flex items-center gap-4">
       <!-- Halving Timer -->
-      <div class="px-5 py-3 bg-gray-50 border-2 border-gray-200 rounded-lg text-center {halvingUrgent ? 'border-red-300 bg-red-50' : ''}">
-        <p class="text-gray-400 text-[10px] uppercase tracking-wider mb-1">Halving</p>
-        <p class="font-mono font-bold text-lg {halvingUrgent ? 'text-red-600' : 'text-amber-600'}">
+      <div class="px-5 py-3 bg-white/5 border border-white/10 rounded-lg text-center {halvingUrgent ? 'border-red-500/50 bg-red-500/10' : ''}">
+        <p class="text-white/40 text-[10px] uppercase tracking-wider mb-1">Halving</p>
+        <p class="font-mono font-bold text-lg {halvingUrgent ? 'text-red-400' : 'text-amber-400'}">
           {formatTime(halvingTime)}
         </p>
       </div>
 
       <!-- Multiplier -->
-      <div class="px-5 py-3 bg-purple-50 border-2 border-purple-200 rounded-lg text-center">
-        <p class="text-gray-400 text-[10px] uppercase tracking-wider mb-1">Multiplier</p>
-        <p class="font-mono font-bold text-lg text-purple-700">{halvingMult.toFixed(2)}x</p>
+      <div class="px-5 py-3 bg-purple-500/10 border border-purple-500/30 rounded-lg text-center">
+        <p class="text-white/40 text-[10px] uppercase tracking-wider mb-1">Multiplier</p>
+        <p class="font-mono font-bold text-lg text-purple-400">{halvingMult.toFixed(2)}x</p>
       </div>
 
       <!-- Goal -->
-      <div class="hidden sm:block px-5 py-3 bg-gray-50 border-2 border-gray-200 rounded-lg text-center">
-        <p class="text-gray-400 text-[10px] uppercase tracking-wider mb-1">Target</p>
-        <p class="font-mono font-bold text-lg text-gray-700">{formatMoney(GAME_CONSTANTS.WIN_PORTFOLIO)}</p>
+      <div class="hidden sm:block px-5 py-3 bg-white/5 border border-white/10 rounded-lg text-center">
+        <p class="text-white/40 text-[10px] uppercase tracking-wider mb-1">Target</p>
+        <p class="font-mono font-bold text-lg text-white/80">{formatMoney(GAME_CONSTANTS.WIN_PORTFOLIO)}</p>
       </div>
     </div>
   </div>
 
-  <!-- Progress to Goal -->
+  <!-- Progress to Goal - Bulkier -->
   <div>
     <div class="flex items-center justify-between mb-3">
-      <span class="text-gray-500 text-sm">Progress to {formatMoney(GAME_CONSTANTS.WIN_PORTFOLIO)}</span>
-      <span class="text-purple-600 font-mono font-bold">{progress.toFixed(1)}%</span>
+      <span class="text-white/50 text-sm">Progress to {formatMoney(GAME_CONSTANTS.WIN_PORTFOLIO)}</span>
+      <span class="text-purple-400 font-mono font-bold">{progress.toFixed(1)}%</span>
     </div>
-    <div class="h-4 bg-gray-100 rounded-full overflow-hidden border-2 border-gray-200">
+    <div class="h-6 bg-white/5 rounded-lg overflow-hidden border border-white/10">
       <div
-        class="h-full bg-purple-600 transition-all duration-300 rounded-full"
+        class="h-full bg-gradient-to-r from-purple-600 to-purple-400 transition-all duration-300 rounded-lg"
         style="width: {progress}%"
       ></div>
     </div>
@@ -86,15 +86,15 @@
   {#if gasMult > 1 || (game.whaleEndTime && Date.now() < game.whaleEndTime)}
     <div class="flex gap-4 mt-6">
       {#if gasMult > 1}
-        <div class="flex-1 px-5 py-3 bg-orange-100 border-2 border-orange-300 rounded-lg flex items-center justify-center gap-3">
+        <div class="flex-1 px-5 py-3 bg-orange-500/15 border border-orange-500/30 rounded-lg flex items-center justify-center gap-3">
           <span class="text-xl">⛽</span>
-          <span class="text-orange-700 font-bold">Gas Fee {gasMult}x</span>
+          <span class="text-orange-400 font-bold">Gas Fee {gasMult}x</span>
         </div>
       {/if}
       {#if game.whaleEndTime && Date.now() < game.whaleEndTime}
-        <div class="flex-1 px-5 py-3 bg-blue-100 border-2 border-blue-300 rounded-lg flex items-center justify-center gap-3">
+        <div class="flex-1 px-5 py-3 bg-blue-500/15 border border-blue-500/30 rounded-lg flex items-center justify-center gap-3">
           <span class="text-xl">🐋</span>
-          <span class="text-blue-700 font-bold">Whale Dump Active</span>
+          <span class="text-blue-400 font-bold">Whale Dump Active</span>
         </div>
       {/if}
     </div>
