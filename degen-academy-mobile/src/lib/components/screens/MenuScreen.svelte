@@ -19,7 +19,7 @@
     </header>
 
     <!-- Play Button -->
-    <div class="flex justify-center" style="margin-top: 16px;">
+    <div class="flex justify-center" style="margin-top: 24px;">
       <button
         onclick={() => startGame()}
         class="play-btn group font-chalk"
