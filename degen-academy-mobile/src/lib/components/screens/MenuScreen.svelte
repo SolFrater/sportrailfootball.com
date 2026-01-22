@@ -70,7 +70,8 @@
       <!-- Box 3: DeFi Basics -->
       <div class="info-box">
         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="color: #60a5fa;">
-          <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+          <path d="M3 3v18h18"/>
+          <path d="M18 9l-5 5-4-4-3 3"/>
         </svg>
         <h3 class="text-white font-chalk text-base" style="margin-top: 16px;">DeFi Mechanics</h3>
         <p class="text-white/60 text-xs" style="margin-top: 8px;">Halvings, gas fees, whale dumps — experience it all risk-free</p>
