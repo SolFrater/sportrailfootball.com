@@ -67,7 +67,11 @@
 
         <!-- Wallet (display only, not clickable) -->
         <div style="display: flex; align-items: center; gap: 8px; padding: 8px 14px; background: #2d2d3a; border-radius: 8px;">
-          <span style="font-size: 14px;">💰</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="color: #fff; opacity: 0.9;">
+            <path d="M3 7c0-1.1.9-2 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z"/>
+            <path d="M16 12a1 1 0 1 0 2 0 1 1 0 0 0-2 0"/>
+            <path d="M3 7l4-3h10l4 3"/>
+          </svg>
           <span class="font-mono font-bold" style="font-size: 15px; color: #fff;">{formatMoney(portfolioVal)}</span>
         </div>
       </div>
@@ -91,36 +95,48 @@
           {/if}
 
           <!-- Action Buttons (right) -->
-          <div style="display: flex; gap: 8px; margin-left: 16px;">
-            <button
-              onclick={() => buyAudit()}
-              disabled={!canAffordAudit}
-              class="action-btn"
-              class:disabled={!canAffordAudit}
-            >
-              <span>🛡️</span>
-              <span class="font-medium">Audit</span>
-              {#if itemsVal.audits > 0}
-                <span style="color: #a78bfa; font-weight: 700;">x{itemsVal.audits}</span>
-              {:else}
-                <span style="color: rgba(255,255,255,0.4);">${auditCost.toFixed(0)}</span>
-              {/if}
-            </button>
+          <div style="display: flex; align-items: center; gap: 8px; margin-left: 16px;">
+            <div class="tooltip-wrapper">
+              <button
+                onclick={() => buyAudit()}
+                disabled={!canAffordAudit}
+                class="action-btn"
+                class:disabled={!canAffordAudit}
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="color: #fff; opacity: 0.85;">
+                  <path d="M12 3l8 4v5c0 5.5-3.8 10.2-8 12-4.2-1.8-8-6.5-8-12V7l8-4z"/>
+                  <path d="M9 12l2 2 4-4"/>
+                </svg>
+                <span class="font-medium">Audit</span>
+                {#if itemsVal.audits > 0}
+                  <span style="color: #a78bfa; font-weight: 700;">x{itemsVal.audits}</span>
+                {:else}
+                  <span style="color: rgba(255,255,255,0.4);">${auditCost.toFixed(0)}</span>
+                {/if}
+              </button>
+              <div class="tooltip">Protects one pool from rug pulls</div>
+            </div>
 
-            <button
-              onclick={() => buyInsurance()}
-              disabled={!canAffordInsurance}
-              class="action-btn"
-              class:disabled={!canAffordInsurance}
-            >
-              <span>🏥</span>
-              <span class="font-medium">Insurance</span>
-              {#if itemsVal.insurance > 0}
-                <span style="color: #4ade80; font-weight: 700;">x{itemsVal.insurance}</span>
-              {:else}
-                <span style="color: rgba(255,255,255,0.4);">${insuranceCost.toFixed(0)}</span>
-              {/if}
-            </button>
+            <div class="tooltip-wrapper">
+              <button
+                onclick={() => buyInsurance()}
+                disabled={!canAffordInsurance}
+                class="action-btn"
+                class:disabled={!canAffordInsurance}
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="color: #fff; opacity: 0.85;">
+                  <circle cx="12" cy="12" r="9"/>
+                  <path d="M12 8v8M8 12h8"/>
+                </svg>
+                <span class="font-medium">Insurance</span>
+                {#if itemsVal.insurance > 0}
+                  <span style="color: #4ade80; font-weight: 700;">x{itemsVal.insurance}</span>
+                {:else}
+                  <span style="color: rgba(255,255,255,0.4);">${insuranceCost.toFixed(0)}</span>
+                {/if}
+              </button>
+              <div class="tooltip">Reduces exploit damage by 50%</div>
+            </div>
           </div>
         </div>
 
@@ -167,12 +183,7 @@
     <div class="flex-1 overflow-y-auto" style="padding-bottom: 32px;">
       <div class="flex flex-col items-center" style="padding: 32px 32px 0 32px;">
         <!-- Section Header -->
-        <div class="flex items-center justify-center mb-6">
-          <div class="flex items-center gap-4">
-            <h2 class="text-white font-semibold text-lg">Liquidity Pools</h2>
-            <span class="text-gray-400 text-xs px-2 py-1 bg-white/10 border border-white/10 rounded">{poolList.length} Active</span>
-          </div>
-        </div>
+        <h2 class="text-white font-semibold text-2xl" style="margin-bottom: 24px;">Liquidity Pools</h2>
 
         <!-- Pool Grid - 2 cards per row, centered -->
         <div class="w-full max-w-5xl grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -257,5 +268,44 @@
   .status-indicator.info {
     background: rgba(96, 165, 250, 0.15);
     color: #60a5fa;
+  }
+
+  /* Tooltip styles */
+  .tooltip-wrapper {
+    position: relative;
+  }
+
+  .tooltip {
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 6px 10px;
+    background: #1a1a2e;
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 6px;
+    font-size: 11px;
+    color: rgba(255,255,255,0.9);
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.15s ease, visibility 0.15s ease;
+    pointer-events: none;
+    z-index: 50;
+  }
+
+  .tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-top-color: #1a1a2e;
+  }
+
+  .tooltip-wrapper:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
   }
 </style>
