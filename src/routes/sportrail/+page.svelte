@@ -1,295 +1,222 @@
 <svelte:head>
-  <title>Sportrail Football - Premier Coaching Education in Portugal</title>
-  <meta name="description" content="Portugal's leading football coaching education institution. DGERT & IPDJ certified. 2,500+ coaches trained since 2016. Courses, masterclasses, and conferences." />
-  <meta property="og:title" content="Sportrail Football - Premier Coaching Education" />
-  <meta property="og:description" content="Elevate your coaching career with Portugal's top football education institution. World-class faculty, certified programs." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://sportrailfootball.com" />
+  <title>Sportrail Football | Player Development & Coach Education in Portugal & Spain</title>
+  <meta name="description" content="Portugal's premier football institution. Elite player development programs, pro trials, and DGERT/IPDJ certified coach education. Based in Portugal, operating across Iberia." />
 </svelte:head>
 
 <!-- Hero -->
 <section class="relative bg-sport-dark overflow-hidden">
-  <div class="absolute inset-0 bg-gradient-to-br from-sport-primary/90 via-sport-dark to-sport-dark"></div>
-  <div class="absolute inset-0 opacity-10">
-    <div class="absolute top-20 left-10 w-72 h-72 bg-sport-accent rounded-full blur-3xl"></div>
-    <div class="absolute bottom-20 right-10 w-96 h-96 bg-sport-gold rounded-full blur-3xl"></div>
-  </div>
-
+  <div class="absolute inset-0 bg-gradient-to-br from-sport-primary/40 via-sport-dark to-sport-dark"></div>
   <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-36">
     <div class="max-w-3xl">
-      <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-sport-accent/20 border border-sport-accent/30 rounded-full mb-6">
-        <div class="w-2 h-2 bg-sport-accent rounded-full animate-pulse"></div>
-        <span class="text-sport-accent text-sm font-sport-body font-medium">DGERT & IPDJ Certified</span>
+      <div class="flex items-center gap-2 mb-6">
+        <span class="px-3 py-1 bg-sport-accent/20 text-sport-accent text-xs font-sport-heading font-semibold rounded-full uppercase tracking-wider">Portugal & Spain</span>
+        <span class="px-3 py-1 bg-sport-gold/20 text-sport-gold text-xs font-sport-heading font-semibold rounded-full uppercase tracking-wider">Since 2016</span>
+      </div>
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-sport-heading font-black text-white leading-tight mb-6">
+        Where Players Grow<br/>
+        <span class="text-sport-accent">& Coaches Excel</span>
+      </h1>
+      <p class="text-lg sm:text-xl text-sport-gray-300 font-sport-body leading-relaxed mb-10 max-w-2xl">
+        Elite football development programs for players and DGERT/IPDJ certified education for coaches.
+        Access Portugal's top coaching network across the Iberian Peninsula.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a href="/sportrail/players" class="px-8 py-4 bg-sport-accent hover:bg-sport-secondary text-white text-center font-sport-heading font-bold rounded-xl transition-colors text-lg">
+          Player Programs
+        </a>
+        <a href="/sportrail/courses" class="px-8 py-4 bg-white/10 hover:bg-white/20 text-white text-center font-sport-heading font-bold rounded-xl transition-colors text-lg border border-white/20">
+          Coach Education
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Two Tracks -->
+<section class="py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <span class="text-sport-accent text-sm font-sport-heading font-semibold uppercase tracking-wider">Two Paths to Excellence</span>
+      <h2 class="text-3xl sm:text-4xl font-sport-heading font-black text-sport-dark mt-3">Choose Your Track</h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8">
+      <!-- Player Track -->
+      <div class="relative bg-gradient-to-br from-sport-primary to-sport-dark rounded-3xl p-8 lg:p-10 text-white overflow-hidden group hover:scale-[1.02] transition-transform">
+        <div class="absolute top-0 right-0 w-32 h-32 bg-sport-accent/10 rounded-full -translate-y-8 translate-x-8"></div>
+        <div class="relative">
+          <div class="w-14 h-14 bg-sport-accent/20 rounded-2xl flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-sport-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          </div>
+          <h3 class="text-2xl font-sport-heading font-bold mb-3">For Players</h3>
+          <p class="text-sport-gray-300 mb-6 leading-relaxed">
+            Development camps, professional trial opportunities, and immersive training programs in Portugal and Spain.
+            Train where Europe's best players are made.
+          </p>
+          <ul class="space-y-3 mb-8">
+            {#each ['Elite development camps (U14-U21)', 'Professional club trial placements', 'Summer intensive programs', 'International player pathways', 'Train at top Portuguese & Spanish facilities'] as item}
+              <li class="flex items-center gap-2 text-sm">
+                <svg class="w-4 h-4 text-sport-accent shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                {item}
+              </li>
+            {/each}
+          </ul>
+          <a href="/sportrail/players" class="inline-flex items-center gap-2 px-6 py-3 bg-sport-accent hover:bg-white hover:text-sport-dark font-sport-heading font-semibold rounded-xl transition-colors">
+            Explore Player Programs
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+        </div>
       </div>
 
-      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-sport-heading font-black text-white leading-tight mb-6">
-        Where Portugal's
-        <span class="text-sport-accent">Elite Coaches</span>
-        Are Made
-      </h1>
-
-      <p class="text-lg sm:text-xl text-sport-gray-300 font-sport-body leading-relaxed mb-8 max-w-2xl">
-        The football coaching education institution trusted by 2,500+ coaches worldwide.
-        Learn from UEFA Pro licensed coaches, sporting directors, and top professionals
-        who shape the future of the game.
-      </p>
-
-      <div class="flex flex-wrap gap-4">
-        <a href="/sportrail/courses" class="px-8 py-4 bg-sport-accent hover:bg-sport-secondary text-white font-sport-heading font-semibold rounded-xl transition-all hover:shadow-lg hover:shadow-sport-accent/20">
-          Explore Courses
-        </a>
-        <a href="/sportrail/about" class="px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-sport-heading font-semibold rounded-xl transition-all border border-white/20">
-          Our Story
-        </a>
+      <!-- Coach Track -->
+      <div class="relative bg-gradient-to-br from-sport-gold/90 to-sport-gold/70 rounded-3xl p-8 lg:p-10 text-sport-dark overflow-hidden group hover:scale-[1.02] transition-transform">
+        <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-8 translate-x-8"></div>
+        <div class="relative">
+          <div class="w-14 h-14 bg-sport-dark/10 rounded-2xl flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-sport-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+          </div>
+          <h3 class="text-2xl font-sport-heading font-bold mb-3">For Coaches</h3>
+          <p class="text-sport-dark/80 mb-6 leading-relaxed">
+            DGERT & IPDJ certified continuing education. Learn from 70+ elite faculty including UEFA Pro coaches,
+            sporting directors, and sports scientists.
+          </p>
+          <ul class="space-y-3 mb-8">
+            {#each ['IPDJ accredited credit units', 'UEFA Pro licensed instructors', 'Masterclasses from €60', 'Online & in-person formats', 'Scouting, analysis, S&C specializations'] as item}
+              <li class="flex items-center gap-2 text-sm">
+                <svg class="w-4 h-4 text-sport-dark shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                {item}
+              </li>
+            {/each}
+          </ul>
+          <a href="/sportrail/courses" class="inline-flex items-center gap-2 px-6 py-3 bg-sport-dark hover:bg-sport-primary text-white font-sport-heading font-semibold rounded-xl transition-colors">
+            Explore Coach Programs
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- Stats -->
-<section class="relative -mt-12 z-10">
-  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+<section class="py-20 bg-sport-light">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-2 lg:grid-cols-5 gap-8">
       {#each [
-        { value: '2,500+', label: 'Coaches Trained', sub: 'Since 2016' },
-        { value: '70+', label: 'Expert Faculty', sub: 'International roster' },
-        { value: '10+', label: 'Partner Clubs', sub: 'Including SL Benfica' },
-        { value: '8+', label: 'Years', sub: 'Of excellence' },
+        { value: '2,500+', label: 'Coaches Trained' },
+        { value: '70+', label: 'Expert Faculty' },
+        { value: '8+', label: 'Years Operating' },
+        { value: '2', label: 'Countries' },
+        { value: '10+', label: 'Partner Clubs' },
       ] as stat}
-        <div class="bg-white rounded-2xl p-6 shadow-lg shadow-sport-primary/5 border border-sport-gray-100 text-center">
-          <div class="text-3xl lg:text-4xl font-sport-heading font-black text-sport-primary">{stat.value}</div>
-          <div class="text-sm font-sport-body font-semibold text-sport-gray-700 mt-1">{stat.label}</div>
-          <div class="text-xs text-sport-gray-400 mt-0.5">{stat.sub}</div>
+        <div class="text-center">
+          <div class="text-3xl sm:text-4xl font-sport-heading font-black text-sport-primary">{stat.value}</div>
+          <div class="text-sm text-sport-gray-500 font-sport-body mt-1">{stat.label}</div>
         </div>
       {/each}
     </div>
   </div>
 </section>
 
-<!-- Why Sportrail -->
+<!-- Portugal & Spain Focus -->
 <section class="py-24 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16">
-      <h2 class="text-3xl sm:text-4xl font-sport-heading font-black text-sport-dark mb-4">
-        Why Coaches Choose Sportrail
+      <span class="text-sport-accent text-sm font-sport-heading font-semibold uppercase tracking-wider">Iberian Peninsula</span>
+      <h2 class="text-3xl sm:text-4xl font-sport-heading font-black text-sport-dark mt-3 mb-4">
+        Train in Portugal & Spain
       </h2>
-      <p class="text-sport-gray-500 font-sport-body max-w-2xl mx-auto">
-        We don't just teach theory. We connect you with the coaches and professionals
-        who are shaping football at the highest level.
+      <p class="text-sport-gray-500 max-w-2xl mx-auto">
+        The Iberian Peninsula produces more top-level coaches and players per capita than anywhere else in Europe.
+        Our programs give you direct access to this ecosystem.
       </p>
     </div>
 
-    <div class="grid md:grid-cols-3 gap-8">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
       {#each [
-        {
-          icon: '🎓',
-          title: 'Certified Education',
-          description: 'DGERT and IPDJ accredited programs that count toward your coaching license renewal. Earn credit units with every course.'
-        },
-        {
-          icon: '🌍',
-          title: 'World-Class Network',
-          description: 'Learn from coaches at Sporting CP, SL Benfica, Casa Pia AC, Sevilla FC, and professionals from across Europe and beyond.'
-        },
-        {
-          icon: '⚽',
-          title: 'Practical Excellence',
-          description: 'From tactical periodization to scouting, match analysis to goalkeeper training — specialized knowledge that transforms your coaching.'
-        },
-      ] as feature}
-        <div class="bg-sport-light rounded-2xl p-8 border border-sport-gray-100 hover:border-sport-accent/30 transition-colors">
-          <div class="text-4xl mb-4">{feature.icon}</div>
-          <h3 class="text-xl font-sport-heading font-bold text-sport-dark mb-3">{feature.title}</h3>
-          <p class="text-sport-gray-500 font-sport-body leading-relaxed">{feature.description}</p>
+        { title: 'Portuguese Methodology', desc: 'Learn the tactical periodization and development philosophy that produced Mourinho, Amorim, Conceicao, and Abel Ferreira.', icon: '🇵🇹' },
+        { title: 'Spanish Integration', desc: 'Access to La Liga methodology, Spanish academy systems, and cross-border coaching exchanges between Portugal and Spain.', icon: '🇪🇸' },
+        { title: 'Elite Facilities', desc: 'Train at professional-grade facilities across Lisbon, Porto, the Algarve, and partner locations in Spain.', icon: '🏟️' },
+        { title: 'Club Connections', desc: 'Direct relationships with Liga Portugal and La Liga clubs for trials, placements, and coaching internships.', icon: '🤝' },
+        { title: 'Year-Round Climate', desc: "Train outdoors 12 months a year. The Iberian climate makes it Europe's ideal base for football development.", icon: '☀️' },
+        { title: 'International Gateway', desc: "Portugal and Spain are Europe's gateway — ideal for players and coaches from Africa, South America, and beyond.", icon: '🌍' },
+      ] as item}
+        <div class="bg-sport-light rounded-2xl p-6 border border-sport-gray-100 hover:border-sport-accent/30 transition-colors">
+          <div class="text-3xl mb-3">{item.icon}</div>
+          <h3 class="font-sport-heading font-bold text-sport-dark text-lg mb-2">{item.title}</h3>
+          <p class="text-sport-gray-500 text-sm leading-relaxed">{item.desc}</p>
         </div>
       {/each}
     </div>
   </div>
 </section>
 
-<!-- Featured Courses -->
-<section class="py-24 bg-sport-light">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex flex-wrap items-end justify-between gap-4 mb-12">
-      <div>
-        <h2 class="text-3xl sm:text-4xl font-sport-heading font-black text-sport-dark mb-2">Featured Programs</h2>
-        <p class="text-sport-gray-500 font-sport-body">Advance your career with our most popular courses.</p>
-      </div>
-      <a href="/sportrail/courses" class="text-sport-accent hover:text-sport-primary font-sport-heading font-semibold transition-colors">
-        View All Courses →
-      </a>
-    </div>
-
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {#each [
-        {
-          title: 'Sports Director Course in Football',
-          edition: '4th Edition',
-          price: '€250',
-          original: '€400',
-          tags: ['Leadership', 'Management'],
-          description: 'Master the art of football club management. From recruitment strategy to academy development.'
-        },
-        {
-          title: 'Scouting Course in Youth Football',
-          edition: '2nd Edition',
-          price: '€150',
-          original: '€225',
-          tags: ['Scouting', 'Youth'],
-          description: 'Develop professional scouting skills. Identify talent, create reports, and build scouting networks.'
-        },
-        {
-          title: 'Match Analysis Masterclass',
-          edition: 'Specialization',
-          price: '€60',
-          original: '€90',
-          tags: ['Tactical', 'Analysis'],
-          description: 'Learn professional match analysis techniques used by top-level coaching staffs across Europe.'
-        },
-        {
-          title: 'Elite Training Specialization',
-          edition: 'Masterclass',
-          price: '€60',
-          original: '€90',
-          tags: ['Training', 'Methodology'],
-          description: 'Advanced training methodologies from coaches working at the highest level of professional football.'
-        },
-        {
-          title: 'Goalkeeper Training Masterclass',
-          edition: 'Specialization',
-          price: '€60',
-          original: '€90',
-          tags: ['Goalkeeper', 'Specialist'],
-          description: 'Specialized goalkeeper coaching techniques from elite GK coaches across Portuguese and international football.'
-        },
-        {
-          title: 'Strength & Conditioning Masterclass',
-          edition: 'Performance',
-          price: '€60',
-          original: '€90',
-          tags: ['S&C', 'Performance'],
-          description: 'Football-specific strength and conditioning methods from leading sports scientists and performance coaches.'
-        },
-      ] as course}
-        <div class="bg-white rounded-2xl overflow-hidden border border-sport-gray-100 hover:border-sport-accent/30 hover:shadow-lg transition-all group">
-          <div class="bg-gradient-to-br from-sport-primary to-sport-secondary p-6">
-            <span class="text-sport-accent/80 text-xs font-sport-heading font-semibold uppercase tracking-wider">{course.edition}</span>
-            <h3 class="text-white font-sport-heading font-bold text-lg mt-1 group-hover:text-sport-gold transition-colors">{course.title}</h3>
-          </div>
-          <div class="p-6">
-            <p class="text-sport-gray-500 text-sm leading-relaxed mb-4">{course.description}</p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              {#each course.tags as tag}
-                <span class="px-2.5 py-0.5 bg-sport-accent/10 text-sport-accent text-xs font-medium rounded-full">{tag}</span>
-              {/each}
-            </div>
-            <div class="flex items-center justify-between pt-4 border-t border-sport-gray-100">
-              <div class="flex items-baseline gap-2">
-                <span class="text-2xl font-sport-heading font-black text-sport-primary">{course.price}</span>
-                <span class="text-sm text-sport-gray-400 line-through">{course.original}</span>
-              </div>
-              <a href="/sportrail/courses" class="text-sm font-sport-heading font-semibold text-sport-accent hover:text-sport-primary transition-colors">
-                Learn More →
-              </a>
-            </div>
-          </div>
-        </div>
-      {/each}
-    </div>
-  </div>
-</section>
-
-<!-- Partners -->
-<section class="py-24 bg-white">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-12">
-      <h2 class="text-3xl sm:text-4xl font-sport-heading font-black text-sport-dark mb-4">Trusted Partners</h2>
-      <p class="text-sport-gray-500 font-sport-body">We collaborate with leading clubs, federations, and organizations.</p>
-    </div>
-
-    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
-      {#each [
-        'SL Benfica',
-        'Sporting Clube de Braga',
-        'Casa Pia AC',
-        'SC Farense',
-        'Rio Ave FC',
-        'Swedish FA',
-        'Sevilla FC',
-        'FC London',
-        'IPDJ',
-        'ThermoHuman',
-        'BuildUp Sports',
-        'Municipio de Loule',
-      ] as partner}
-        <div class="bg-sport-light rounded-xl p-4 flex items-center justify-center h-20 border border-sport-gray-100 hover:border-sport-accent/30 transition-colors">
-          <span class="text-sm font-sport-heading font-semibold text-sport-gray-600 text-center">{partner}</span>
-        </div>
-      {/each}
-    </div>
-  </div>
-</section>
-
-<!-- Conferences -->
+<!-- Upcoming Events -->
 <section class="py-24 bg-sport-dark">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid lg:grid-cols-2 gap-12 items-center">
-      <div>
-        <span class="text-sport-gold text-sm font-sport-heading font-semibold uppercase tracking-wider">Events</span>
-        <h2 class="text-3xl sm:text-4xl font-sport-heading font-black text-white mt-2 mb-6">
-          International Conferences
-        </h2>
-        <p class="text-sport-gray-300 font-sport-body leading-relaxed mb-6">
-          Sportrail organizes major international conferences bringing together the world's top football minds.
-          Our events are where knowledge meets networking at the highest level.
-        </p>
-        <div class="space-y-4 mb-8">
-          {#each [
-            { name: 'Football Science Conference', desc: 'Research, sports science, and performance innovation' },
-            { name: 'International Scouting Conference', desc: 'The present and future of talent identification' },
-          ] as conf}
-            <div class="flex items-start gap-3">
-              <div class="w-2 h-2 bg-sport-accent rounded-full mt-2 shrink-0"></div>
-              <div>
-                <div class="text-white font-sport-heading font-semibold">{conf.name}</div>
-                <div class="text-sport-gray-400 text-sm">{conf.desc}</div>
-              </div>
-            </div>
-          {/each}
-        </div>
-        <a href="/sportrail/conferences" class="inline-flex px-6 py-3 bg-sport-accent hover:bg-sport-secondary text-white font-sport-heading font-semibold rounded-xl transition-colors">
-          View Upcoming Events
-        </a>
-      </div>
+    <div class="text-center mb-16">
+      <span class="text-sport-gold text-sm font-sport-heading font-semibold uppercase tracking-wider">2026 Calendar</span>
+      <h2 class="text-3xl sm:text-4xl font-sport-heading font-black text-white mt-3">Upcoming Programs & Events</h2>
+    </div>
 
-      <div class="bg-gradient-to-br from-sport-primary to-sport-secondary rounded-2xl p-10 text-center">
-        <div class="text-6xl font-sport-heading font-black text-white/20 mb-4">2026</div>
-        <h3 class="text-2xl font-sport-heading font-bold text-white mb-3">Season Opening Soon</h3>
-        <p class="text-sport-gray-300 font-sport-body mb-6">Join coaches from around the world at our upcoming events. Early registration available.</p>
-        <a href="/sportrail/contact" class="inline-flex px-6 py-3 bg-white/10 hover:bg-white/20 text-white font-sport-heading font-semibold rounded-xl border border-white/20 transition-colors">
-          Get Notified
-        </a>
-      </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {#each [
+        { title: 'Summer Player Development Camp', date: 'June - August 2026', location: 'Lisbon & Algarve, Portugal', type: 'Players' },
+        { title: 'International Pro Trials Week', date: 'July 2026', location: 'Lisbon, Portugal', type: 'Players' },
+        { title: 'Sportrail Football Science Conference', date: 'September 2026', location: 'Oeiras, Portugal', type: 'Coaches' },
+        { title: 'Coaching Masterclass Series', date: 'Year-round', location: 'Online & In-person', type: 'Coaches' },
+        { title: 'Easter Intensive Camp', date: 'April 2026', location: 'Portugal & Spain', type: 'Players' },
+        { title: 'International Scouting Conference', date: 'November 2026', location: 'Oeiras, Portugal', type: 'Coaches' },
+      ] as event}
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-white/20 transition-colors">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="px-2 py-0.5 text-xs font-sport-heading font-semibold rounded-full {event.type === 'Players' ? 'bg-sport-accent/20 text-sport-accent' : 'bg-sport-gold/20 text-sport-gold'}">{event.type}</span>
+          </div>
+          <h3 class="font-sport-heading font-bold text-white text-lg mb-2">{event.title}</h3>
+          <div class="space-y-1 text-sm text-sport-gray-400">
+            <p>{event.date}</p>
+            <p>{event.location}</p>
+          </div>
+        </div>
+      {/each}
+    </div>
+
+    <div class="text-center mt-12">
+      <a href="/sportrail/contact" class="inline-flex px-8 py-4 bg-sport-accent hover:bg-sport-secondary text-white font-sport-heading font-bold rounded-xl transition-colors text-lg">
+        Register Your Interest
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Trusted By -->
+<section class="py-16 bg-sport-light">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <p class="text-center text-sm text-sport-gray-400 font-sport-heading uppercase tracking-wider mb-8">Trusted by professionals from</p>
+    <div class="flex flex-wrap items-center justify-center gap-8 lg:gap-12 opacity-60">
+      {#each ['Casa Pia AC', 'SC Torreense', 'FC Famalicão', 'Sporting CP', 'Swedish Federation', 'German Federation', 'Viking FC', 'Flamengo'] as partner}
+        <span class="font-sport-heading font-bold text-sport-gray-600 text-sm lg:text-base">{partner}</span>
+      {/each}
     </div>
   </div>
 </section>
 
 <!-- CTA -->
-<section class="py-24 bg-gradient-to-br from-sport-primary via-sport-secondary to-sport-accent">
+<section class="py-24 bg-gradient-to-br from-sport-primary to-sport-dark">
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-sport-heading font-black text-white mb-6">
-      Ready to Elevate Your Coaching?
+    <h2 class="text-3xl sm:text-4xl font-sport-heading font-black text-white mb-6">
+      Ready to Start Your Journey?
     </h2>
-    <p class="text-lg text-white/80 font-sport-body mb-8 max-w-2xl mx-auto">
-      Join 2,500+ coaches who have advanced their careers with Sportrail.
-      Certified education, world-class faculty, real connections.
+    <p class="text-lg text-sport-gray-300 mb-10 max-w-2xl mx-auto">
+      Whether you're a player looking for your next opportunity or a coach ready to elevate your career,
+      Sportrail is your gateway to Iberian football excellence.
     </p>
-    <div class="flex flex-wrap justify-center gap-4">
-      <a href="/sportrail/courses" class="px-8 py-4 bg-white text-sport-primary font-sport-heading font-bold rounded-xl hover:bg-sport-gold hover:text-sport-dark transition-all shadow-lg">
-        Browse Courses
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="/sportrail/players" class="px-8 py-4 bg-sport-accent hover:bg-white hover:text-sport-dark text-white font-sport-heading font-bold rounded-xl transition-colors text-lg">
+        I'm a Player
       </a>
-      <a href="/sportrail/contact" class="px-8 py-4 bg-white/10 text-white font-sport-heading font-semibold rounded-xl border-2 border-white/30 hover:bg-white/20 transition-all">
-        Contact Us
+      <a href="/sportrail/courses" class="px-8 py-4 bg-sport-gold hover:bg-white hover:text-sport-dark text-sport-dark font-sport-heading font-bold rounded-xl transition-colors text-lg">
+        I'm a Coach
       </a>
     </div>
   </div>

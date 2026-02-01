@@ -6,11 +6,11 @@
 
   const navLinks = [
     { href: '/sportrail', label: 'Home' },
+    { href: '/sportrail/players', label: 'For Players' },
+    { href: '/sportrail/courses', label: 'For Coaches' },
     { href: '/sportrail/about', label: 'About' },
-    { href: '/sportrail/courses', label: 'Courses' },
-    { href: '/sportrail/coaches', label: 'Coaches' },
-    { href: '/sportrail/conferences', label: 'Conferences' },
-    { href: '/sportrail/clubs', label: 'For Clubs' },
+    { href: '/sportrail/coaches', label: 'Faculty' },
+    { href: '/sportrail/conferences', label: 'Events' },
     { href: '/sportrail/blog', label: 'Insights' },
     { href: '/sportrail/contact', label: 'Contact' },
   ];
@@ -30,7 +30,7 @@
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center h-16 lg:h-20">
       <!-- Logo -->
-      <a href="/sportrail" class="flex items-center gap-3">
+      <a href="/" class="flex items-center gap-3">
         <div class="w-10 h-10 bg-sport-accent rounded-lg flex items-center justify-center">
           <span class="text-white font-sport-heading font-bold text-lg">S</span>
         </div>
@@ -51,7 +51,7 @@
           </a>
         {/each}
         <a
-          href="/sportrail/courses"
+          href="/courses"
           class="ml-4 px-5 py-2.5 bg-sport-accent hover:bg-sport-secondary text-white text-sm font-sport-heading font-semibold rounded-lg transition-colors"
         >
           Enroll Now
@@ -87,7 +87,7 @@
           </a>
         {/each}
         <a
-          href="/sportrail/courses"
+          href="/courses"
           class="block mt-3 mx-4 px-5 py-3 bg-sport-accent text-white text-center font-sport-heading font-semibold rounded-lg"
           onclick={() => mobileMenuOpen = false}
         >
@@ -116,7 +116,7 @@
           <span class="text-white font-sport-heading font-bold text-xl">SPORTRAIL</span>
         </div>
         <p class="text-sm text-sport-gray-400 leading-relaxed mb-4">
-          Portugal's premier football coaching education institution. Developing elite coaches since 2016.
+          Portugal's premier football education institution. Developing elite players and coaches since 2016.
         </p>
         <div class="flex gap-3">
           <a href="https://facebook.com/sportrailpt" target="_blank" rel="noopener" class="w-9 h-9 bg-sport-secondary/30 hover:bg-sport-accent rounded-lg flex items-center justify-center transition-colors" aria-label="Facebook">
@@ -131,26 +131,26 @@
         </div>
       </div>
 
-      <!-- Quick Links -->
+      <!-- For Players -->
       <div>
-        <h3 class="text-white font-sport-heading font-semibold text-sm uppercase tracking-wider mb-4">Education</h3>
+        <h3 class="text-white font-sport-heading font-semibold text-sm uppercase tracking-wider mb-4">For Players</h3>
         <ul class="space-y-2.5">
-          <li><a href="/sportrail/courses" class="text-sm hover:text-sport-accent transition-colors">All Courses</a></li>
-          <li><a href="/sportrail/courses#masterclasses" class="text-sm hover:text-sport-accent transition-colors">Masterclasses</a></li>
-          <li><a href="/sportrail/courses#certification" class="text-sm hover:text-sport-accent transition-colors">Certifications</a></li>
-          <li><a href="/sportrail/conferences" class="text-sm hover:text-sport-accent transition-colors">Conferences</a></li>
-          <li><a href="/sportrail/coaches" class="text-sm hover:text-sport-accent transition-colors">Our Coaches</a></li>
+          <li><a href="/players" class="text-sm hover:text-sport-accent transition-colors">Player Programs</a></li>
+          <li><a href="/players#development" class="text-sm hover:text-sport-accent transition-colors">Development Camps</a></li>
+          <li><a href="/players#trials" class="text-sm hover:text-sport-accent transition-colors">Pro Trials</a></li>
+          <li><a href="/players#international" class="text-sm hover:text-sport-accent transition-colors">International Players</a></li>
         </ul>
       </div>
 
-      <!-- For Professionals -->
+      <!-- For Coaches -->
       <div>
-        <h3 class="text-white font-sport-heading font-semibold text-sm uppercase tracking-wider mb-4">For Professionals</h3>
+        <h3 class="text-white font-sport-heading font-semibold text-sm uppercase tracking-wider mb-4">For Coaches</h3>
         <ul class="space-y-2.5">
-          <li><a href="/sportrail/clubs" class="text-sm hover:text-sport-accent transition-colors">Club Training Programs</a></li>
-          <li><a href="/sportrail/clubs#consulting" class="text-sm hover:text-sport-accent transition-colors">Consulting</a></li>
-          <li><a href="/sportrail/blog" class="text-sm hover:text-sport-accent transition-colors">Insights & Articles</a></li>
-          <li><a href="https://academy.sportrail.pt" target="_blank" rel="noopener" class="text-sm hover:text-sport-accent transition-colors">E-Learning Platform</a></li>
+          <li><a href="/courses" class="text-sm hover:text-sport-accent transition-colors">Coach Education</a></li>
+          <li><a href="/courses#masterclasses" class="text-sm hover:text-sport-accent transition-colors">Masterclasses</a></li>
+          <li><a href="/conferences" class="text-sm hover:text-sport-accent transition-colors">Events & Conferences</a></li>
+          <li><a href="/coaches" class="text-sm hover:text-sport-accent transition-colors">Faculty</a></li>
+          <li><a href="https://academy.sportrail.pt" target="_blank" rel="noopener" class="text-sm hover:text-sport-accent transition-colors">E-Learning</a></li>
         </ul>
       </div>
 

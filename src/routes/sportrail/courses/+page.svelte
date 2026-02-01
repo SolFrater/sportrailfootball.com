@@ -1,19 +1,19 @@
 <svelte:head>
-  <title>Courses & Masterclasses | Sportrail Football</title>
-  <meta name="description" content="DGERT & IPDJ certified football coaching courses. Sports Director, Scouting, Match Analysis, Goalkeeper Training, S&C and more. Enroll now." />
+  <title>Coach Education | Sportrail Football — Certified Courses in Portugal & Spain</title>
+  <meta name="description" content="DGERT & IPDJ certified football coaching courses in Portugal and Spain. Sports Director, Scouting, Match Analysis, Goalkeeper Training, S&C and more." />
 </svelte:head>
 
 <!-- Hero -->
 <section class="bg-sport-dark py-20 lg:py-28">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="max-w-3xl">
-      <span class="text-sport-accent text-sm font-sport-heading font-semibold uppercase tracking-wider">Education</span>
+      <span class="text-sport-gold text-sm font-sport-heading font-semibold uppercase tracking-wider">For Coaches</span>
       <h1 class="text-4xl sm:text-5xl font-sport-heading font-black text-white mt-3 mb-6">
-        Courses & Masterclasses
+        Coach Education<br/><span class="text-sport-gold">Portugal & Spain</span>
       </h1>
       <p class="text-lg text-sport-gray-300 font-sport-body leading-relaxed">
-        All programs are certified by DGERT and accredited by IPDJ. Earn credit units toward
-        your coaching license renewal while learning from the best in the game.
+        DGERT certified and IPDJ accredited coaching programs. Earn credit units toward
+        your license renewal while learning from 70+ elite faculty across the Iberian Peninsula.
       </p>
     </div>
   </div>
@@ -100,7 +100,7 @@
                 </div>
                 <span class="text-sport-gray-400 text-xs">{course.format}</span>
               </div>
-              <a href="/sportrail/contact" class="px-6 py-3 bg-sport-accent hover:bg-white hover:text-sport-primary text-white font-sport-heading font-semibold rounded-xl transition-colors">
+              <a href="/contact" class="px-6 py-3 bg-sport-accent hover:bg-white hover:text-sport-primary text-white font-sport-heading font-semibold rounded-xl transition-colors">
                 Enroll Now
               </a>
             </div>
@@ -171,7 +171,7 @@
               <span class="text-2xl font-sport-heading font-black text-sport-primary">€{mc.price}</span>
               <span class="text-sm text-sport-gray-400 line-through">€{mc.original}</span>
             </div>
-            <a href="/sportrail/contact" class="text-sm font-sport-heading font-semibold text-sport-accent hover:text-sport-primary transition-colors">
+            <a href="/contact" class="text-sm font-sport-heading font-semibold text-sport-accent hover:text-sport-primary transition-colors">
               Enroll →
             </a>
           </div>
