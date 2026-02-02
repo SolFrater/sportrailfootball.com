@@ -1,13 +1,13 @@
 <svelte:head>
-  <title>Our Coaches & Faculty | Sportrail Football</title>
-  <meta name="description" content="70+ expert faculty including UEFA Pro coaches, sporting directors, sports scientists, and scouts from top European clubs." />
+  <title>Our Experts | Sportrail Football</title>
+  <meta name="description" content="70+ world-class experts including UEFA Pro coaches, sporting directors, sports scientists, and scouts from top European clubs." />
 </svelte:head>
 
 <!-- Hero -->
 <section class="bg-sport-dark py-20 lg:py-28">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="max-w-3xl">
-      <span class="text-sport-red text-sm font-sport-heading font-semibold uppercase tracking-wider">Faculty</span>
+      <span class="text-sport-red text-sm font-sport-heading font-semibold uppercase tracking-wider">Our Experts</span>
       <h1 class="text-4xl sm:text-5xl font-sport-heading font-black text-white mt-3 mb-6">
         70+ World-Class Experts
       </h1>
@@ -199,10 +199,10 @@
 <!-- CTA -->
 <section class="py-16 bg-sport-red">
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <h2 class="text-2xl font-sport-heading font-black text-white mb-4">Want to Join Our Faculty?</h2>
+    <h2 class="text-2xl font-sport-heading font-black text-white mb-4">Want to Join Our Team of Experts?</h2>
     <p class="text-sport-gray-300 font-sport-body mb-6">We're always looking for exceptional professionals to share their knowledge.</p>
     <a href="/contact" class="inline-flex px-8 py-3 bg-sport-red hover:bg-sport-gold text-white font-sport-heading font-semibold rounded-xl transition-colors">
-      Apply as Faculty
+      Apply as Expert
     </a>
   </div>
 </section>

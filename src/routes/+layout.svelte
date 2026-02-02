@@ -9,7 +9,7 @@
     { href: '/players', label: 'For Players' },
     { href: '/courses', label: 'For Coaches' },
     { href: '/about', label: 'About' },
-    { href: '/coaches', label: 'Faculty' },
+    { href: '/coaches', label: 'Our Experts' },
     { href: '/conferences', label: 'Events' },
     { href: '/blog', label: 'Insights' },
     { href: '/contact', label: 'Contact' },
@@ -31,7 +31,7 @@
     <div class="flex justify-between items-center h-16 lg:h-20">
       <!-- Logo -->
       <a href="/" class="flex items-center gap-2">
-        <img src="/sportrail-logo.avif" alt="Sportrail" class="h-12 w-12 rounded" />
+        <img src="/sportrail-logo.svg" alt="Sportrail" class="h-10 lg:h-12 w-auto" />
       </a>
 
       <!-- Desktop Nav -->
@@ -45,10 +45,10 @@
           </a>
         {/each}
         <a
-          href="/courses"
+          href="/contact"
           class="ml-4 px-5 py-2.5 bg-sport-red hover:bg-red-700 text-white text-sm font-sport-heading font-semibold rounded transition-colors uppercase"
         >
-          Enroll Now
+          Get a Quote
         </a>
       </div>
 
@@ -81,11 +81,11 @@
           </a>
         {/each}
         <a
-          href="/courses"
+          href="/contact"
           class="block mt-3 mx-4 px-5 py-3 bg-sport-red text-white text-center font-sport-heading font-semibold rounded uppercase"
           onclick={() => mobileMenuOpen = false}
         >
-          Enroll Now
+          Get a Quote
         </a>
       </div>
     {/if}
@@ -104,7 +104,7 @@
       <!-- Brand -->
       <div class="lg:col-span-1">
         <div class="flex items-center gap-3 mb-4">
-          <img src="/sportrail-logo.avif" alt="Sportrail" class="h-12 w-12 rounded" />
+          <img src="/sportrail-logo.svg" alt="Sportrail" class="h-10 w-auto" />
         </div>
         <p class="text-sm text-sport-gray-400 leading-relaxed mb-4">
           Portugal's premier football education institution. Developing elite players and coaches since 2016.
@@ -138,10 +138,9 @@
         <h3 class="text-white font-sport-heading font-semibold text-sm uppercase tracking-wider mb-4">For Coaches</h3>
         <ul class="space-y-2.5">
           <li><a href="/courses" class="text-sm hover:text-sport-red transition-colors">Coach Education</a></li>
-          <li><a href="/courses#masterclasses" class="text-sm hover:text-sport-red transition-colors">Masterclasses</a></li>
+          <li><a href="/courses#tailored" class="text-sm hover:text-sport-red transition-colors">Tailored Courses</a></li>
           <li><a href="/conferences" class="text-sm hover:text-sport-red transition-colors">Events & Conferences</a></li>
-          <li><a href="/coaches" class="text-sm hover:text-sport-red transition-colors">Faculty</a></li>
-          <li><a href="https://academy.sportrail.pt" target="_blank" rel="noopener" class="text-sm hover:text-sport-red transition-colors">E-Learning</a></li>
+          <li><a href="/coaches" class="text-sm hover:text-sport-red transition-colors">Our Experts</a></li>
         </ul>
       </div>
 

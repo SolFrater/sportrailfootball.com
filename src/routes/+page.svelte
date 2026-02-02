@@ -1,6 +1,6 @@
 <svelte:head>
-  <title>Sportrail Football | Player Development & Coach Education in Portugal & Spain</title>
-  <meta name="description" content="Portugal's premier football institution. Elite player development programs, pro trials, and DGERT/IPDJ certified coach education. Based in Portugal, operating across Iberia." />
+  <title>Sportrail Football | Player Development & Coach Education — In-Person & Online</title>
+  <meta name="description" content="Portugal's premier football institution. Elite player development programs, pro trials, and DGERT/IPDJ certified coach education. In-person and online worldwide." />
 </svelte:head>
 
 <!-- Hero -->
@@ -9,7 +9,7 @@
   <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-36">
     <div class="max-w-3xl">
       <div class="flex items-center gap-2 mb-6">
-        <span class="px-3 py-1 bg-sport-red/20 text-sport-red text-xs font-sport-heading font-semibold rounded-full uppercase tracking-wider">Portugal & Spain</span>
+        <span class="px-3 py-1 bg-sport-red/20 text-sport-red text-xs font-sport-heading font-semibold rounded-full uppercase tracking-wider">In-Person & Online</span>
         <span class="px-3 py-1 bg-sport-gold/20 text-sport-gold text-xs font-sport-heading font-semibold rounded-full uppercase tracking-wider">Since 2016</span>
       </div>
       <h1 class="text-4xl sm:text-5xl lg:text-6xl font-sport-heading font-black text-white leading-tight mb-6">
@@ -18,7 +18,7 @@
       </h1>
       <p class="text-lg sm:text-xl text-sport-gray-300 font-sport-body leading-relaxed mb-10 max-w-2xl">
         Elite football development programs for players and DGERT/IPDJ certified education for coaches.
-        Access Portugal's top coaching network across the Iberian Peninsula.
+        Learn from world-class experts, in-person or online.
       </p>
       <div class="flex flex-col sm:flex-row gap-4">
         <a href="/players" class="px-8 py-4 bg-sport-red hover:bg-red-700 text-white text-center font-sport-heading font-bold rounded-xl transition-colors text-lg">
@@ -81,7 +81,7 @@
             sporting directors, and sports scientists.
           </p>
           <ul class="space-y-3 mb-8">
-            {#each ['IPDJ accredited credit units', 'UEFA Pro licensed instructors', 'Masterclasses from €60', 'Online & in-person formats', 'Scouting, analysis, S&C specializations'] as item}
+            {#each ['IPDJ accredited credit units', 'UEFA Pro licensed instructors', 'Tailored courses for every specialization', 'Online & in-person formats', 'Scouting, analysis, S&C specializations'] as item}
               <li class="flex items-center gap-2 text-sm">
                 <svg class="w-4 h-4 text-sport-dark shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                 {item}
@@ -122,13 +122,13 @@
 <section class="py-24 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16">
-      <span class="text-sport-red text-sm font-sport-heading font-semibold uppercase tracking-wider">Iberian Peninsula</span>
+      <span class="text-sport-red text-sm font-sport-heading font-semibold uppercase tracking-wider">Why Sportrail</span>
       <h2 class="text-3xl sm:text-4xl font-sport-heading font-black text-sport-dark mt-3 mb-4">
-        Train in Portugal & Spain
+        Train In-Person & Online
       </h2>
       <p class="text-sport-gray-500 max-w-2xl mx-auto">
-        The Iberian Peninsula produces more top-level coaches and players per capita than anywhere else in Europe.
-        Our programs give you direct access to this ecosystem.
+        Access world-class football education wherever you are. Join in-person programs in Portugal and Spain,
+        or learn online from the best coaches and experts worldwide.
       </p>
     </div>
 

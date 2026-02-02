@@ -1,6 +1,6 @@
 <svelte:head>
-  <title>Coach Education | Sportrail Football — Certified Courses in Portugal & Spain</title>
-  <meta name="description" content="DGERT & IPDJ certified football coaching courses in Portugal and Spain. Sports Director, Scouting, Match Analysis, Goalkeeper Training, S&C and more." />
+  <title>Coach Education | Sportrail Football — In-Person & Online Courses</title>
+  <meta name="description" content="Learn from the best coaches and experts from all over the world, with state-of-the-art knowledge and practical experience in world's top clubs." />
 </svelte:head>
 
 <!-- Hero -->
@@ -9,34 +9,12 @@
     <div class="max-w-3xl">
       <span class="text-sport-gold text-sm font-sport-heading font-semibold uppercase tracking-wider">For Coaches</span>
       <h1 class="text-4xl sm:text-5xl font-sport-heading font-black text-white mt-3 mb-6">
-        Coach Education<br/><span class="text-sport-gold">Portugal & Spain</span>
+        Coach Education<br/><span class="text-sport-gold">In-Person & Online</span>
       </h1>
       <p class="text-lg text-sport-gray-300 font-sport-body leading-relaxed">
-        DGERT certified and IPDJ accredited coaching programs. Earn credit units toward
-        your license renewal while learning from 70+ elite faculty across the Iberian Peninsula.
+        Learn from the best coaches and experts from all over the world, with state-of-the-art
+        knowledge and practical experience in world's top clubs.
       </p>
-    </div>
-  </div>
-</section>
-
-<!-- Credit Info -->
-<section class="py-8 bg-sport-red/10 border-b border-sport-red/20">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex flex-wrap items-center justify-center gap-6 text-sm font-sport-body">
-      <div class="flex items-center gap-2">
-        <span class="font-semibold text-sport-red">In-person:</span>
-        <span class="text-sport-gray-600">0.2 UC per hour</span>
-      </div>
-      <div class="w-px h-4 bg-sport-gray-300"></div>
-      <div class="flex items-center gap-2">
-        <span class="font-semibold text-sport-red">Online:</span>
-        <span class="text-sport-gray-600">0.1 UC per hour</span>
-      </div>
-      <div class="w-px h-4 bg-sport-gray-300"></div>
-      <div class="flex items-center gap-2">
-        <span class="font-semibold text-sport-red">Payment:</span>
-        <span class="text-sport-gray-600">3 interest-free installments available</span>
-      </div>
     </div>
   </div>
 </section>
@@ -51,8 +29,6 @@
         {
           title: 'Sports Director Course in Football',
           edition: '4th Edition',
-          price: 250,
-          original: 400,
           description: 'Comprehensive program covering football club management, recruitment strategy, academy structure, and sporting direction. Designed for coaches transitioning to leadership roles or professionals seeking to enter football management.',
           topics: ['Club Management & Governance', 'Recruitment & Transfer Strategy', 'Academy Development Models', 'Financial Planning in Football', 'Communication & Media Relations', 'Legal Framework in Sport'],
           format: 'Online + In-person sessions',
@@ -61,8 +37,6 @@
         {
           title: 'Scouting Course in Youth Football',
           edition: '2nd Edition',
-          price: 150,
-          original: 225,
           description: 'Professional scouting education covering talent identification, player assessment frameworks, report writing, and building scouting networks. Learn from scouts working at top European clubs.',
           topics: ['Talent Identification Models', 'Player Assessment Criteria', 'Scouting Report Writing', 'Video Analysis for Scouting', 'Building Scouting Networks', 'Youth Development Pathways'],
           format: 'Online + In-person sessions',
@@ -93,15 +67,9 @@
             </div>
 
             <div class="flex items-center justify-between pt-6 border-t border-white/10">
-              <div>
-                <div class="flex items-baseline gap-2">
-                  <span class="text-3xl font-sport-heading font-black text-white">€{course.price}</span>
-                  <span class="text-sport-gray-400 line-through text-sm">€{course.original}</span>
-                </div>
-                <span class="text-sport-gray-400 text-xs">{course.format}</span>
-              </div>
+              <span class="text-sport-gray-400 text-sm">{course.format}</span>
               <a href="/contact" class="px-6 py-3 bg-sport-red hover:bg-white hover:text-sport-red text-white font-sport-heading font-semibold rounded-xl transition-colors">
-                Enroll Now
+                Get a Quote
               </a>
             </div>
           </div>
@@ -111,53 +79,41 @@
   </div>
 </section>
 
-<!-- Masterclasses -->
-<section id="masterclasses" class="py-24 bg-sport-light">
+<!-- Tailored Courses -->
+<section id="tailored" class="py-24 bg-sport-light">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 class="text-2xl font-sport-heading font-black text-sport-dark mb-2">Specialization Masterclasses</h2>
+    <h2 class="text-2xl font-sport-heading font-black text-sport-dark mb-2">Tailored Courses</h2>
     <p class="text-sport-gray-500 font-sport-body mb-8">Focused, intensive programs on specific coaching domains.</p>
 
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
       {#each [
         {
           title: 'Match Analysis',
-          price: 60,
-          original: 90,
           icon: '📊',
           description: 'Professional match analysis techniques. Video breakdown, tactical pattern recognition, and data-driven insights.',
         },
         {
           title: 'Elite Training Methods',
-          price: 60,
-          original: 90,
           icon: '🏋️',
           description: 'Advanced training methodologies from top-level coaching staffs. Session design, periodization, and player development.',
         },
         {
           title: 'Football Training',
-          price: 150,
-          original: 250,
           icon: '⚽',
           description: 'Comprehensive football training course. Game models, training principles, and practical exercise design.',
         },
         {
           title: 'Goalkeeper Training',
-          price: 60,
-          original: 90,
           icon: '🧤',
           description: 'Specialized goalkeeper coaching. Technical development, decision making, distribution, and modern GK role.',
         },
         {
           title: 'Training & Match Practical Issues',
-          price: 90,
-          original: 120,
           icon: '📋',
           description: 'Real-world coaching challenges. Match-day preparation, half-time adjustments, and in-game management.',
         },
         {
           title: 'Strength & Conditioning',
-          price: 60,
-          original: 90,
           icon: '💪',
           description: 'Football-specific S&C. Physical preparation, injury prevention, load management, and performance optimization.',
         },
@@ -166,34 +122,14 @@
           <div class="text-3xl mb-3">{mc.icon}</div>
           <h3 class="font-sport-heading font-bold text-sport-dark text-lg mb-2">{mc.title}</h3>
           <p class="text-sport-gray-500 font-sport-body text-sm leading-relaxed mb-4">{mc.description}</p>
-          <div class="flex items-center justify-between pt-4 border-t border-sport-gray-100">
-            <div class="flex items-baseline gap-2">
-              <span class="text-2xl font-sport-heading font-black text-sport-red">€{mc.price}</span>
-              <span class="text-sm text-sport-gray-400 line-through">€{mc.original}</span>
-            </div>
-            <a href="/contact" class="text-sm font-sport-heading font-semibold text-sport-red hover:text-sport-red transition-colors">
-              Enroll →
+          <div class="pt-4 border-t border-sport-gray-100">
+            <a href="/contact" class="inline-flex items-center gap-2 text-sm font-sport-heading font-semibold text-sport-red hover:text-red-700 transition-colors">
+              Get a Quote
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
             </a>
           </div>
         </div>
       {/each}
     </div>
-  </div>
-</section>
-
-<!-- E-Learning -->
-<section class="py-24 bg-white">
-  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <span class="text-sport-red text-sm font-sport-heading font-semibold uppercase tracking-wider">Online Learning</span>
-    <h2 class="text-3xl font-sport-heading font-black text-sport-dark mt-3 mb-4">E-Learning Academy</h2>
-    <p class="text-sport-gray-500 font-sport-body leading-relaxed mb-8 max-w-2xl mx-auto">
-      Access our growing library of courses from anywhere in the world through our dedicated
-      e-learning platform. Study at your own pace with the same quality education and
-      IPDJ credit units.
-    </p>
-    <a href="https://academy.sportrail.pt" target="_blank" rel="noopener"
-      class="inline-flex px-8 py-4 bg-sport-red hover:bg-red-700 text-white font-sport-heading font-semibold rounded-xl transition-colors">
-      Visit Academy Platform →
-    </a>
   </div>
 </section>
