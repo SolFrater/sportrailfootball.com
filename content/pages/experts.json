@@ -10,18 +10,18 @@
       "name": "Coaches & Managers",
       "experts": [
         {
-          "name": "Luis Castro",
+          "name": "Luís Castro",
           "role": "UEFA Pro Coach",
           "flag": "🇵🇹"
         },
         {
           "name": "Renato Paiva",
-          "role": "Football Coach",
+          "role": "UEFA Pro Coach",
           "flag": "🇵🇹"
         },
         {
-          "name": "Joao Tralhao",
-          "role": "Football Coach",
+          "name": "João Tralhão",
+          "role": "UEFA Pro Coach",
           "flag": "🇵🇹"
         },
         {
@@ -31,27 +31,27 @@
         },
         {
           "name": "Andoni Bombin",
-          "role": "UEFA Pro / Director of Methodology",
+          "role": "Director of Methodology",
           "flag": "🇪🇸"
         },
         {
           "name": "Mariana Cabral",
-          "role": "Football Coach",
+          "role": "UEFA Pro Coach",
           "flag": "🇵🇹"
         },
         {
-          "name": "Goncalo Nunes",
-          "role": "Football Coach",
+          "name": "Gonçalo Nunes",
+          "role": "UEFA A Coach",
           "flag": "🇵🇹"
         },
         {
-          "name": "Joao Nuno Fonseca",
-          "role": "Football Coach",
+          "name": "João Nuno Fonseca",
+          "role": "UEFA Pro Coach",
           "flag": "🇵🇹"
         },
         {
           "name": "Gil Sousa",
-          "role": "Football Coach",
+          "role": "UEFA Pro Coach",
           "flag": "🇵🇹"
         },
         {
@@ -61,17 +61,17 @@
         },
         {
           "name": "Blessing Lumueno",
-          "role": "Football Coach",
+          "role": "UEFA A Coach",
           "flag": "🇨🇩"
         },
         {
-          "name": "Ruben Pinheiro",
-          "role": "Football Coach",
+          "name": "Rúben Pinheiro",
+          "role": "UEFA A Coach",
           "flag": "🇵🇹"
         },
         {
           "name": "Carlos Pinto",
-          "role": "U19 Coach, SC Torreense",
+          "role": "UEFA A Coach",
           "flag": "🇵🇹"
         }
       ]
@@ -80,7 +80,7 @@
       "name": "Sporting Directors & Management",
       "experts": [
         {
-          "name": "Jose Boto",
+          "name": "José Boto",
           "role": "Sporting Director",
           "flag": "🇵🇹"
         },
@@ -95,23 +95,23 @@
           "flag": "🇵🇹"
         },
         {
-          "name": "Jose Couceiro",
+          "name": "José Couceiro",
           "role": "Sports Consultant",
           "flag": "🇵🇹"
         },
         {
           "name": "Rui Abreu",
-          "role": "President SAD",
+          "role": "CEO/President",
           "flag": "🇵🇹"
         },
         {
-          "name": "Rui Lanca",
+          "name": "Rui Lança",
           "role": "Sporting Director",
           "flag": "🇵🇹"
         },
         {
           "name": "Eduardo Covelo Mateo",
-          "role": "Youth Football Director",
+          "role": "Academy Director",
           "flag": "🇪🇸"
         },
         {
@@ -121,11 +121,11 @@
         },
         {
           "name": "Jason Stephens",
-          "role": "Football Business Specialist",
+          "role": "MCO Specialist",
           "flag": "🇬🇧"
         },
         {
-          "name": "Jose Collado",
+          "name": "José Collado",
           "role": "International Projects Director",
           "flag": "🇪🇸"
         },
@@ -142,12 +142,12 @@
         {
           "name": "Adam Centofanti",
           "role": "S&C Coach",
-          "flag": "🇬🇧"
+          "flag": "AU"
         },
         {
           "name": "Alex Calder",
           "role": "Head of Performance",
-          "flag": "🇬🇧"
+          "flag": "AU"
         },
         {
           "name": "Andrea Riboli",
@@ -170,19 +170,19 @@
           "flag": "🇪🇸"
         },
         {
-          "name": "Joao Francisco Almeida",
+          "name": "João Francisco Almeida",
           "role": "Head of Performance",
           "flag": "🇵🇹"
         },
         {
           "name": "John Grace",
           "role": "Head of Performance",
-          "flag": "🇬🇧"
+          "flag": "US"
         },
         {
           "name": "Kyle Davey",
           "role": "Neck Injury Expert",
-          "flag": "🇬🇧"
+          "flag": "US"
         },
         {
           "name": "Martin Buchheitt",
@@ -191,11 +191,6 @@
         },
         {
           "name": "Miguel Alonso",
-          "role": "Physical Preparation Coach",
-          "flag": "🇪🇸"
-        },
-        {
-          "name": "Pablo Diaz",
           "role": "Physical Preparation Coach",
           "flag": "🇪🇸"
         },
@@ -220,7 +215,7 @@
       "name": "Analysis, Scouting & Specialist",
       "experts": [
         {
-          "name": "Andres Bretones",
+          "name": "Andrés Bretones",
           "role": "Tactical Analyst",
           "flag": "🇪🇸"
         },
@@ -315,8 +310,8 @@
           "flag": "🇧🇷"
         },
         {
-          "name": "Pedro Sa",
-          "role": "Director of Communication, FC Famalicao",
+          "name": "Pedro Sá",
+          "role": "Director of Communication",
           "flag": "🇵🇹"
         },
         {
@@ -330,7 +325,7 @@
           "flag": "🇵🇹"
         },
         {
-          "name": "Jose Miguel Nora",
+          "name": "José Miguel Nora",
           "role": "Sports Lawyer",
           "flag": "🇵🇹"
         }
