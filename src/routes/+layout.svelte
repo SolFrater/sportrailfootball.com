@@ -46,7 +46,7 @@
         {/each}
         <a
           href="/contact"
-          class="ml-4 px-5 py-2.5 bg-sport-red hover:bg-red-700 text-white text-sm font-sport-heading font-semibold rounded transition-colors uppercase"
+          class="ml-4 px-4 py-2 bg-sport-red hover:bg-red-700 text-white text-xs font-sport-heading font-semibold rounded transition-colors uppercase"
         >
           Get a Quote
         </a>
@@ -82,7 +82,7 @@
         {/each}
         <a
           href="/contact"
-          class="block mt-3 mx-4 px-5 py-3 bg-sport-red text-white text-center font-sport-heading font-semibold rounded uppercase"
+          class="block mt-3 mx-4 px-5 py-2.5 bg-sport-red text-white text-center font-sport-heading font-semibold text-sm rounded uppercase"
           onclick={() => mobileMenuOpen = false}
         >
           Get a Quote
