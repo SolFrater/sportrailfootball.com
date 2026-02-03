@@ -11,13 +11,13 @@
 <!-- Hero -->
 <section class="relative bg-sport-dark overflow-hidden">
   <div class="absolute inset-0 bg-gradient-to-br from-sport-red/40 via-sport-dark to-sport-dark"></div>
-  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-36">
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20 lg:py-36">
     <div class="max-w-3xl">
       <div class="flex items-center gap-2 mb-6">
         <span class="px-3 py-1 bg-sport-red/20 text-sport-red text-xs font-sport-heading font-semibold rounded-full uppercase tracking-wider">{c.badge}</span>
         <span class="px-3 py-1 bg-sport-gold/20 text-sport-gold text-xs font-sport-heading font-semibold rounded-full uppercase tracking-wider">Since 2016</span>
       </div>
-      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-sport-heading font-black text-white leading-tight mb-6">
+      <h1 class="text-3xl sm:text-5xl lg:text-6xl font-sport-heading font-black text-white leading-snug sm:leading-tight mb-6">
         {c.title_line1}<br/>
         <span class="text-sport-red">{c.title_line2}</span>
       </h1>
@@ -25,10 +25,10 @@
         {c.subtitle}
       </p>
       <div class="flex flex-col sm:flex-row gap-4">
-        <a href="/players" class="px-8 py-4 bg-sport-red hover:bg-red-700 text-white text-center font-sport-heading font-bold rounded-xl transition-colors text-lg">
+        <a href="/players" class="px-6 py-3 sm:px-8 sm:py-4 bg-sport-red hover:bg-red-700 text-white text-center font-sport-heading font-bold rounded-xl transition-colors text-base sm:text-lg">
           Player Programs
         </a>
-        <a href="/courses" class="px-8 py-4 bg-white/10 hover:bg-white/20 text-white text-center font-sport-heading font-bold rounded-xl transition-colors text-lg border border-white/20">
+        <a href="/courses" class="px-6 py-3 sm:px-8 sm:py-4 bg-white/10 hover:bg-white/20 text-white text-center font-sport-heading font-bold rounded-xl transition-colors text-base sm:text-lg border border-white/20">
           Coach Education
         </a>
       </div>
@@ -37,7 +37,7 @@
 </section>
 
 <!-- Two Tracks -->
-<section class="py-24 bg-white">
+<section class="py-12 sm:py-20 lg:py-24 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16">
       <span class="text-sport-red text-sm font-sport-heading font-semibold uppercase tracking-wider">Two Paths to Excellence</span>
@@ -46,7 +46,7 @@
 
     <div class="grid md:grid-cols-2 gap-8">
       <!-- Player Track -->
-      <div class="relative bg-gradient-to-br from-sport-red to-sport-dark rounded-3xl p-8 lg:p-10 text-white overflow-hidden group hover:scale-[1.02] transition-transform">
+      <div class="relative bg-gradient-to-br from-sport-red to-sport-dark rounded-3xl p-6 lg:p-10 text-white overflow-hidden group hover:scale-[1.02] transition-transform">
         <div class="absolute top-0 right-0 w-32 h-32 bg-sport-red/10 rounded-full -translate-y-8 translate-x-8"></div>
         <div class="relative">
           <div class="w-14 h-14 bg-sport-red/20 rounded-2xl flex items-center justify-center mb-6">
@@ -73,7 +73,7 @@
       </div>
 
       <!-- Coach Track -->
-      <div class="relative bg-gradient-to-br from-sport-gold/90 to-sport-gold/70 rounded-3xl p-8 lg:p-10 text-sport-dark overflow-hidden group hover:scale-[1.02] transition-transform">
+      <div class="relative bg-gradient-to-br from-sport-gold/90 to-sport-gold/70 rounded-3xl p-6 lg:p-10 text-sport-dark overflow-hidden group hover:scale-[1.02] transition-transform">
         <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-8 translate-x-8"></div>
         <div class="relative">
           <div class="w-14 h-14 bg-sport-dark/10 rounded-2xl flex items-center justify-center mb-6">
@@ -103,9 +103,9 @@
 </section>
 
 <!-- Stats -->
-<section class="py-20 bg-sport-light">
+<section class="py-12 sm:py-16 lg:py-20 bg-sport-light">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid grid-cols-2 lg:grid-cols-5 gap-8">
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 md:gap-8">
       {#each c.stats as stat}
         <div class="text-center">
           <div class="text-3xl sm:text-4xl font-sport-heading font-black text-sport-red">{stat.value}</div>
@@ -117,7 +117,7 @@
 </section>
 
 <!-- Why Sportrail -->
-<section class="py-24 bg-white">
+<section class="py-12 sm:py-20 lg:py-24 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16">
       <span class="text-sport-red text-sm font-sport-heading font-semibold uppercase tracking-wider">Why Sportrail</span>
@@ -142,7 +142,7 @@
 </section>
 
 <!-- Upcoming Events -->
-<section class="py-24 bg-sport-dark">
+<section class="py-12 sm:py-20 lg:py-24 bg-sport-dark">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16">
       <span class="text-sport-gold text-sm font-sport-heading font-semibold uppercase tracking-wider">2026 Calendar</span>
@@ -172,7 +172,7 @@
     </div>
 
     <div class="text-center mt-12">
-      <a href="/contact" class="inline-flex px-8 py-4 bg-sport-red hover:bg-red-700 text-white font-sport-heading font-bold rounded-xl transition-colors text-lg">
+      <a href="/contact" class="inline-flex px-6 py-3 sm:px-8 sm:py-4 bg-sport-red hover:bg-red-700 text-white font-sport-heading font-bold rounded-xl transition-colors text-base sm:text-lg">
         Register Your Interest
       </a>
     </div>
@@ -180,7 +180,7 @@
 </section>
 
 <!-- Trusted By -->
-<section class="py-16 bg-sport-light">
+<section class="py-8 sm:py-12 lg:py-16 bg-sport-light">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <p class="text-center text-sm text-sport-gray-400 font-sport-heading uppercase tracking-wider mb-8">Trusted by professionals from</p>
     <div class="flex flex-wrap items-center justify-center gap-8 lg:gap-12 opacity-60">
@@ -192,7 +192,7 @@
 </section>
 
 <!-- CTA -->
-<section class="py-24 bg-gradient-to-br from-sport-red to-sport-dark">
+<section class="py-12 sm:py-20 lg:py-24 bg-gradient-to-br from-sport-red to-sport-dark">
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
     <h2 class="text-3xl sm:text-4xl font-sport-heading font-black text-white mb-6">
       Ready to Start Your Journey?
@@ -202,10 +202,10 @@
       Sportrail is your gateway to Iberian football excellence.
     </p>
     <div class="flex flex-col sm:flex-row gap-4 justify-center">
-      <a href="/players" class="px-8 py-4 bg-sport-red hover:bg-white hover:text-sport-dark text-white font-sport-heading font-bold rounded-xl transition-colors text-lg">
+      <a href="/players" class="px-6 py-3 sm:px-8 sm:py-4 bg-sport-red hover:bg-white hover:text-sport-dark text-white font-sport-heading font-bold rounded-xl transition-colors text-base sm:text-lg">
         I'm a Player
       </a>
-      <a href="/courses" class="px-8 py-4 bg-sport-gold hover:bg-white hover:text-sport-dark text-sport-dark font-sport-heading font-bold rounded-xl transition-colors text-lg">
+      <a href="/courses" class="px-6 py-3 sm:px-8 sm:py-4 bg-sport-gold hover:bg-white hover:text-sport-dark text-sport-dark font-sport-heading font-bold rounded-xl transition-colors text-base sm:text-lg">
         I'm a Coach
       </a>
     </div>
